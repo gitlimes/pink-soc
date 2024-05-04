@@ -140,7 +140,7 @@ Rails.application.routes.draw do
 
   resource :inbox, only: [:create], module: :activitypub
 
-  get '/:encoded_at(*path)', to: redirect("/@%{path}"), constraints: { encoded_at: /%40/ }
+  get '/:encoded_at(*path)', to: redirect('/@%{path}'), constraints: { encoded_at: /%40/ }
 
   constraints(username: %r{[^@/.]+}) do
     with_options to: 'accounts#show' do
@@ -190,6 +190,14 @@ Rails.application.routes.draw do
   end
 
   resource :relationships, only: [:show, :update]
+  resources :severed_relationships, only: [:index] do
+    member do
+      constraints(format: :csv) do
+        get :followers
+        get :following
+      end
+    end
+  end
   resource :statuses_cleanup, controller: :statuses_cleanup, only: [:show, :update]
 
   get '/media_proxy/:id/(*any)', to: 'media_proxy#show', as: :media_proxy, format: false

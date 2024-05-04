@@ -295,7 +295,7 @@ ko:
         software_updates:
           all: 모든 업데이트에 대해 알림
           critical: 긴급 업데이트에 대해서만 알림
-          label: 새 마스토돈 버전이 사용 가능합니다
+          label: 새 마스토돈 버전이 있을 때
           none: 업데이트에 대해 알리지 않기 (비추천)
           patch: 버그픽스 업데이트에 대해 알림
         trending_tag: 검토해야 할 새 유행
@@ -303,7 +303,7 @@ ko:
         hint: 추가 정보
         text: 규칙
       settings:
-        indexable: 검색 엔진에 프로필 페이지 기재하기
+        indexable: 검색엔진에 프로필 페이지 포함하기
         show_application: 어떤 앱으로 게시물을 보냈는지 표시
       tag:
         listable: 이 해시태그가 검색과 추천에 보여지도록 허용

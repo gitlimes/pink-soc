@@ -615,7 +615,7 @@ de:
       created_at: Gemeldet
       delete_and_resolve: Beiträge löschen
       forwarded: Weitergeleitet
-      forwarded_replies_explanation: Diese Meldung stammt von einem externen Profil und betrifft einen externen Inhalt. Der Inhalt wurde an Dich weitergeleitet, weil er eine Antwort auf ein bei Dir registriertes Profil ist.
+      forwarded_replies_explanation: Diese Meldung stammt von einem externen Profil und betrifft einen externen Inhalt. Der Inhalt wurde an dich weitergeleitet, weil er eine Antwort auf ein bei dir registriertes Profil ist.
       forwarded_to: Weitergeleitet an %{domain}
       mark_as_resolved: Als geklärt markieren
       mark_as_sensitive: Mit einer Inhaltswarnung versehen
@@ -1659,10 +1659,22 @@ de:
     preferences: Einstellungen
     profile: Öffentliches Profil
     relationships: Follower und Folge ich
+    severed_relationships: Getrennte Beziehungen
     statuses_cleanup: Automatische Löschung
     strikes: Maßnahmen
     two_factor_authentication: Zwei-Faktor-Authentisierung (2FA)
     webauthn_authentication: Sicherheitsschlüssel
+  severed_relationships:
+    download: Herunterladen (%{count})
+    event_type:
+      account_suspension: Kontosperre (%{target_name})
+      domain_block: Serversperre (%{target_name})
+      user_domain_block: Du hast %{target_name} blockiert
+    lost_followers: Verlorene Follower
+    lost_follows: Konten entfolgt
+    preamble: Möglicherweise verlierst du Follower und entfolgst Konten, wenn du eine Domain blockierst oder Moderator*innen externe Server sperren. Sollte das der Fall sein, wirst du eine Liste mit den getrennten Beziehungen herunterladen können. Dadurch kannst du die Änderungen einsehen oder die Liste auf einen anderen Server importieren.
+    purged: Informationen über diesen Server wurden von deinen Server-Administrator*innen entfernt.
+    type: Ereignis
   statuses:
     attached:
       audio:
@@ -1756,6 +1768,7 @@ de:
     contrast: Mastodon (Hoher Kontrast)
     default: Mastodon (Dunkel)
     mastodon-light: Mastodon (Hell)
+    system: Automatisch (mit System synchronisieren)
   time:
     formats:
       default: "%d. %b %Y, %H:%M Uhr"
