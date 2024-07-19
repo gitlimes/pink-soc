@@ -34,9 +34,9 @@ Rails.application.config.content_security_policy do |p|
   p.base_uri        :none
   p.default_src     :none
   p.frame_ancestors :none
-  p.font_src        :self, assets_host, host_to_url("fonts.googleapis.com"), host_to_url("use.typekit.net")
+  p.font_src        :self, assets_host, "fonts.googleapis.com", "use.typekit.net"
   p.img_src         :self, :data, :blob, *media_hosts
-  p.style_src       :self, assets_host, host_to_url("fonts.googleapis.com"), host_to_url("use.typekit.net")
+  p.style_src       :self, assets_host, "fonts.googleapis.com", "use.typekit.net"
   p.media_src       :self, :data, *media_hosts
   p.frame_src       :self, :https
   p.manifest_src    :self, assets_host
