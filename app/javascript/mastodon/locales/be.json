@@ -415,6 +415,7 @@
   "limited_account_hint.title": "Гэты профіль быў схаваны мадэратарамі",
   "link_preview.author": "Ад {name}",
   "link_preview.more_from_author": "Больш ад {name}",
+  "link_preview.shares": "{count, plural, one {{counter} допіс} few {{counter} допісы} many {{counter} допісаў} other {{counter} допісу}}",
   "lists.account.add": "Дадаць да спісу",
   "lists.account.remove": "Выдаліць са спісу",
   "lists.delete": "Выдаліць спіс",
