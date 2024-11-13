@@ -1,7 +1,7 @@
 # Mastodon Pink Edition
 
 "Powers" https://fedi.limes.pink and https://mastodon.pretendo.network.
-Uses Mastodon Modern theme (CC-BY-SA 4.0, [source](https://codeberg.org/Freeplay/Mastodon-Modern))
+Uses Mastodon Modern theme (CC-BY-SA 4.0, [source](https://git.gay/freeplay/Mastodon-Modern))
 
 Mastodon Pink Edition is a fork of [Mastodon Glitch Edition](https://github.com/glitch-soc/mastodon), which is itself a fork of [Mastodon](https://github.com/mastodon/mastodon).  Upstream's README file is reproduced below.
 
