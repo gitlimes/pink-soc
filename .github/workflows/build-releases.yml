@@ -20,9 +20,6 @@ jobs:
         ghcr.io/${{ github.repository_owner }}/mastodon
       # Do not use cache when building releases, so apt update is always ran and the release always contain the latest packages
       cache: false
-      # Only tag with latest when ran against the latest stable branch
-      # This needs to be updated after each minor version release
-      flavor: ""
       tags: |
         type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
         type=raw,value=edge,enable=${{ github.ref == 'refs/heads/dev' }}
@@ -39,9 +36,6 @@ jobs:
         ghcr.io/${{ github.repository_owner }}/mastodon-streaming
       # Do not use cache when building releases, so apt update is always ran and the release always contain the latest packages
       cache: false
-      # Only tag with latest when ran against the latest stable branch
-      # This needs to be updated after each minor version release
-      flavor: ""
       tags: |
         type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
         type=raw,value=edge,enable=${{ github.ref == 'refs/heads/dev' }}
