@@ -124,3 +124,4 @@ with this program. If not, see https://www.gnu.org/licenses/
 [CONTRIBUTING]: CONTRIBUTING.md
 [DEVELOPMENT]: docs/DEVELOPMENT.md
 [OpenCollective]: https://opencollective.com/mastodon
+
