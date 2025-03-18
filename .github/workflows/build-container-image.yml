@@ -15,8 +15,6 @@ on:
         type: string
       version_metadata:
         type: string
-      flavor:
-        type: string
       tags:
         type: string
       labels:
@@ -81,7 +79,6 @@ jobs:
         if: ${{ inputs.push_to_images != '' }}
         with:
           images: ${{ inputs.push_to_images }}
-          flavor: ${{ inputs.flavor }}
           tags: ${{ inputs.tags }}
           labels: ${{ inputs.labels }}
 
