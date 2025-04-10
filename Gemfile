@@ -14,6 +14,7 @@ gem 'haml-rails', '~>2.0'
 gem 'pg', '~> 1.5'
 gem 'pghero'
 
+gem 'aws-sdk-core', '< 3.216.0', require: false # TODO: https://github.com/mastodon/mastodon/pull/34173#issuecomment-2733378873
 gem 'aws-sdk-s3', '~> 1.123', require: false
 gem 'blurhash', '~> 0.1'
 gem 'fog-core', '<= 2.6.0'
@@ -39,7 +40,7 @@ gem 'net-ldap', '~> 0.18'
 
 gem 'omniauth', '~> 2.0'
 gem 'omniauth-cas', '~> 3.0.0.beta.1'
-gem 'omniauth_openid_connect', '~> 0.6.1'
+gem 'omniauth_openid_connect', '~> 0.8.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'omniauth-saml', '~> 2.0'
 
@@ -102,10 +103,10 @@ gem 'rdf-normalize', '~> 0.5'
 
 gem 'prometheus_exporter', '~> 2.2', require: false
 
-gem 'opentelemetry-api', '~> 1.4.0'
+gem 'opentelemetry-api', '~> 1.5.0'
 
 group :opentelemetry do
-  gem 'opentelemetry-exporter-otlp', '~> 0.29.0', require: false
+  gem 'opentelemetry-exporter-otlp', '~> 0.30.0', require: false
   gem 'opentelemetry-instrumentation-active_job', '~> 0.8.0', require: false
   gem 'opentelemetry-instrumentation-active_model_serializers', '~> 0.22.0', require: false
   gem 'opentelemetry-instrumentation-concurrent_ruby', '~> 0.22.0', require: false
@@ -116,7 +117,7 @@ group :opentelemetry do
   gem 'opentelemetry-instrumentation-net_http', '~> 0.23.0', require: false
   gem 'opentelemetry-instrumentation-pg', '~> 0.30.0', require: false
   gem 'opentelemetry-instrumentation-rack', '~> 0.26.0', require: false
-  gem 'opentelemetry-instrumentation-rails', '~> 0.35.0', require: false
+  gem 'opentelemetry-instrumentation-rails', '~> 0.36.0', require: false
   gem 'opentelemetry-instrumentation-redis', '~> 0.26.0', require: false
   gem 'opentelemetry-instrumentation-sidekiq', '~> 0.26.0', require: false
   gem 'opentelemetry-sdk', '~> 1.4', require: false
@@ -145,9 +146,6 @@ group :test do
   # Used to mock environment variables
   gem 'climate_control'
 
-  # Add back helpers functions removed in Rails 5.1
-  gem 'rails-controller-testing', '~> 1.0'
-
   # Validate schemas in specs
   gem 'json-schema', '~> 5.0'
 
@@ -168,6 +166,7 @@ group :development do
   # Code linting CLI and plugins
   gem 'rubocop', require: false
   gem 'rubocop-capybara', require: false
+  gem 'rubocop-i18n', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false

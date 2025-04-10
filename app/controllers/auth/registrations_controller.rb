@@ -12,7 +12,6 @@ class Auth::RegistrationsController < Devise::RegistrationsController
   before_action :set_sessions, only: [:edit, :update]
   before_action :set_strikes, only: [:edit, :update]
   before_action :require_not_suspended!, only: [:update]
-  before_action :set_cache_headers, only: [:edit, :update]
   before_action :set_rules, only: :new
   before_action :require_rules_acceptance!, only: :new
   before_action :set_registration_form_time, only: :new
@@ -63,7 +62,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
 
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit({ account_attributes: [:username, :display_name], invite_request_attributes: [:text] }, :email, :password, :password_confirmation, :invite_code, :agreement, :website, :confirm_password)
+      user_params.permit({ account_attributes: [:username, :display_name], invite_request_attributes: [:text] }, :email, :password, :password_confirmation, :invite_code, :agreement, :website, :confirm_password, :date_of_birth)
     end
   end
 
@@ -137,10 +136,6 @@ class Auth::RegistrationsController < Devise::RegistrationsController
     @invite_code  = invite_code
 
     set_locale { render :rules }
-  end
-
-  def set_cache_headers
-    response.cache_control.replace(private: true, no_store: true)
   end
 
   def is_flashing_format? # rubocop:disable Naming/PredicateName
