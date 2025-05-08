@@ -6,7 +6,7 @@ RSpec.describe 'Admin Tags' do
   describe 'Tag interaction' do
     let!(:tag) { Fabricate(:tag, name: 'test') }
 
-    before { sign_in Fabricate(:admin_user) }
+    before { sign_in Fabricate(:user, role: UserRole.find_by(name: 'Admin')) }
 
     it 'allows tags listing and editing' do
       visit admin_tags_path
@@ -28,7 +28,7 @@ RSpec.describe 'Admin Tags' do
     end
 
     def display_name_field
-      form_label('defaults.display_name')
+      I18n.t('simple_form.labels.defaults.display_name')
     end
 
     def match_error_text

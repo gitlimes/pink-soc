@@ -54,7 +54,6 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
       @status = Status.create!(@params)
       attach_tags(@status)
       attach_mentions(@status)
-      attach_counts(@status)
     end
 
     resolve_thread(@status)
@@ -177,18 +176,6 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     end
   end
 
-  def attach_counts(status)
-    likes = @status_parser.favourites_count
-    shares = @status_parser.reblogs_count
-    return if likes.nil? && shares.nil?
-
-    status.status_stat.tap do |status_stat|
-      status_stat.untrusted_reblogs_count = shares unless shares.nil?
-      status_stat.untrusted_favourites_count = likes unless likes.nil?
-      status_stat.save if status_stat.changed?
-    end
-  end
-
   def process_tags
     return if @object['tag'].nil?
 
@@ -222,7 +209,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     return if account.nil?
 
     @mentions << Mention.new(account: account, silent: false)
-  rescue Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
+  rescue Mastodon::UnexpectedResponseError, HTTP::TimeoutError, HTTP::ConnectionError, OpenSSL::SSL::SSLError
     @unresolved_mentions << tag['href']
   end
 
@@ -273,7 +260,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
         media_attachment.download_file!
         media_attachment.download_thumbnail!
         media_attachment.save
-      rescue Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
+      rescue Mastodon::UnexpectedResponseError, HTTP::TimeoutError, HTTP::ConnectionError, OpenSSL::SSL::SSLError
         RedownloadMediaWorker.perform_in(rand(30..600).seconds, media_attachment.id)
       rescue Seahorse::Client::NetworkingError => e
         Rails.logger.warn "Error storing media attachment: #{e}"
@@ -338,7 +325,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     collection = @object['replies']
     return if collection.blank?
 
-    replies = ActivityPub::FetchRepliesService.new.call(status.account.uri, collection, allow_synchronous_requests: false, request_id: @options[:request_id])
+    replies = ActivityPub::FetchRepliesService.new.call(status, collection, allow_synchronous_requests: false, request_id: @options[:request_id])
     return unless replies.nil?
 
     uri = value_or_id(collection)

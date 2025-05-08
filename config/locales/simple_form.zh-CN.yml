@@ -3,14 +3,14 @@ zh-CN:
   simple_form:
     hints:
       account:
-        attribution_domains: 每行一个域名。这样就可以保护作品免受虚假署名。
+        attribution_domains_as_text: 每行一个域名。这样就可以保护作品免受虚假署名。
         discoverable: 你的公开嘟文和个人资料可能会在 Mastodon 的多个位置展示，你的个人资料可能会被推荐给其他用户。
         display_name: 你的全名或昵称。
         fields: 你的主页、人称代词、年龄，以及任何你想要添加的内容。
         indexable: 你的公开嘟文会出现在 Mastodon 的搜索结果中。无论是否勾选，与你的嘟文有过交互的人都可能通过搜索找到它们。
         note: '你可以提及 @其他人 或 #话题 。'
         show_collections: 人们将能够浏览你的关注和追随者。你关注的人会看到你关注他们。
-        unlocked: 人们将能够在不请求批准的情况下关注你。如果你希望审核关注请求并选择接受或拒绝新的关注者，请取消勾选此项。
+        unlocked: 人们将能够在不请求批准的情况下关注你。如果你希望审核关注请求并选择接受或拒绝新的粉丝，请取消勾选此项。
       account_alias:
         acct: 指定你想要迁移过来的原账号：用户名@站点域名
       account_migration:
@@ -60,7 +60,6 @@ zh-CN:
         setting_display_media_default: 隐藏被标记为敏感内容的媒体
         setting_display_media_hide_all: 始终隐藏媒体
         setting_display_media_show_all: 始终显示媒体
-        setting_system_scrollbars_ui: 仅对基于 Safari 或 Chromium 内核的桌面端浏览器有效
         setting_use_blurhash: 渐变是基于模糊后的隐藏内容生成的
         setting_use_pending_items: 点击查看时间线更新，而非自动滚动更新动态。
         username: 你只能使用字母、数字和下划线
@@ -130,16 +129,6 @@ zh-CN:
         show_application: 无论如何，你始终可以看到是哪个应用发布了你的嘟文。
       tag:
         name: 你只能改变字母的大小写，让它更易读
-      terms_of_service:
-        changelog: 可以使用 Markdown 语法。
-        text: 可以使用 Markdown 语法。
-      terms_of_service_generator:
-        admin_email: 法务通知包括反通知、法院命令、内容下架要求与执法机关的要求。
-        choice_of_law: 适用内部实质法律以管辖任何及所有索赔的城市、地区、领土或州。
-        dmca_address: 如果你是位于美国的运营者，请使用在 DMCA 指定代表名录中注册的地址。如果你需要使用邮政信箱，可以直接申请。请使用 DMCA 指定代表邮政信箱豁免申请表，通过电子邮件联系版权办公室，并声明你是居家内容审核员，因担心审核操作会招致报复或打击报复，需要使用邮政信箱以避免公开家庭住址。
-        domain: 你所提供的在线服务的唯一标识。
-        jurisdiction: 请列出支付运营费用者所在的国家/地区。如果为公司或其他实体，请列出其注册的国家/地区以及相应的城市、地区、领地或州。
-        min_age: 不应低于您所在地法律管辖权要求的最低年龄。
       user:
         chosen_languages: 仅选中语言的嘟文会出现在公共时间线上（全不选则显示所有语言的嘟文）
         role: 角色用于控制用户拥有的权限。
@@ -155,7 +144,7 @@ zh-CN:
         url: 事件将被发往的目的地
     labels:
       account:
-        attribution_domains: 授权展示你的署名的网站
+        attribution_domains_as_text: 授权展示你的署名的网站
         discoverable: 在发现算法中展示你的账号与嘟文
         fields:
           name: 标签
@@ -232,10 +221,8 @@ zh-CN:
         setting_display_media_show_all: 显示全部
         setting_expand_spoilers: 一律展开具有内容警告的嘟文
         setting_hide_network: 隐藏你的社交网络
-        setting_missing_alt_text_modal: 发布媒体时若未为其设置替代文本，则显示确认对话框
         setting_reduce_motion: 降低过渡动画效果
         setting_system_font_ui: 使用系统默认字体
-        setting_system_scrollbars_ui: 使用系统默认样式的滚动条
         setting_theme: 站点主题
         setting_trends: 显示今日热门
         setting_unfollow_modal: 在取消关注前询问我
@@ -267,7 +254,6 @@ zh-CN:
         favicon: Favicon
         mascot: 自定义吉祥物（旧）
         media_cache_retention_period: 媒体缓存保留期
-        min_age: 最低年龄要求
         peers_api_enabled: 在API中公开的已知实例的服务器的列表
         profile_directory: 启用用户目录
         registrations_mode: 谁可以注册
@@ -331,24 +317,7 @@ zh-CN:
         name: 话题
         trendable: 允许在热门下显示此话题
         usable: 允许本站嘟文使用此话题
-      terms_of_service:
-        changelog: 变更说明
-        effective_date: 生效日期
-        text: 服务条款
-      terms_of_service_generator:
-        admin_email: 接收法务通知的邮箱地址
-        arbitration_address: 仲裁通知的实际送达地址
-        arbitration_website: 仲裁通知的在线提交入口
-        choice_of_law: 法律适用选择
-        dmca_address: 接收DMCA/版权通知的实际地址
-        dmca_email: 接收DMCA/版权通知的邮箱地址
-        domain: 域名
-        jurisdiction: 法律管辖区
-        min_age: 最低年龄
       user:
-        date_of_birth_1i: 日
-        date_of_birth_2i: 月
-        date_of_birth_3i: 年
         role: 角色
         time_zone: 时区
       user_role:

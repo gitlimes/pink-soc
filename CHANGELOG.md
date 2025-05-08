@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.3.8] - 2025-05-06
+
+### Security
+
+- Update dependencies
+- Check scheme on account, profile, and media URLs ([GHSA-x2rc-v5wx-g3m5](https://github.com/mastodon/mastodon/security/advisories/GHSA-x2rc-v5wx-g3m5))
+
+### Added
+
+- Add warning for REDIS_NAMESPACE deprecation at startup (#34581 by @ClearlyClaire)
+- Add built-in context for interaction policies (#34574 by @ClearlyClaire)
+
+### Changed
+
+- Change activity distribution error handling to skip retrying for deleted accounts (#33617 by @ClearlyClaire)
+
+### Removed
+
+- Remove double-query for signed query strings (#34610 by @ClearlyClaire)
+
+### Fixed
+
+- Fix incorrect redirect in response to unauthenticated API requests in limited federation mode (#34549 by @ClearlyClaire)
+- Fix sign-up e-mail confirmation page reloading on error or redirect (#34548 by @ClearlyClaire)
+
+## [4.3.7] - 2025-04-02
+
+### Added
+
+- Add delay to profile updates to debounce them (#34137 by @ClearlyClaire)
+- Add support for paginating partial collections in `SynchronizeFollowersService` (#34272 and #34277 by @ClearlyClaire)
+
+### Changed
+
+- Change account suspensions to be federated to recently-followed accounts as well (#34294 by @ClearlyClaire)
+- Change `AccountReachFinder` to consider statuses based on suspension date (#32805 and #34291 by @ClearlyClaire and @mjankowski)
+- Change user archive signed URL TTL from 10 seconds to 1 hour (#34254 by @ClearlyClaire)
+
+### Fixed
+
+- Fix static version of animated PNG emojis not being properly extracted (#34337 by @ClearlyClaire)
+- Fix filters not applying in detailed view, favourites and bookmarks (#34259 and #34260 by @ClearlyClaire)
+- Fix handling of malformed/unusual HTML (#34201 by @ClearlyClaire)
+- Fix `CacheBuster` being queued for missing media attachments (#34253 by @ClearlyClaire)
+- Fix incorrect URL being used when cache busting (#34189 by @ClearlyClaire)
+- Fix streaming server refusing unix socket path in `DATABASE_URL` (#34091 by @ClearlyClaire)
+- Fix “x” hotkey not working on boosted filtered posts (#33758 by @ClearlyClaire)
+
 ## [4.3.6] - 2025-03-13
 
 ### Security
@@ -187,7 +235,7 @@ The following changelog entries focus on changes visible to users, administrator
   - `GET /api/v2/notifications`: https://docs.joinmastodon.org/methods/grouped_notifications/#get-grouped
   - `GET /api/v2/notifications/:group_key`: https://docs.joinmastodon.org/methods/grouped_notifications/#get-notification-group
   - `GET /api/v2/notifications/:group_key/accounts`: https://docs.joinmastodon.org/methods/grouped_notifications/#get-group-accounts
-  - `POST /api/v2/notifications/:group_key/dismiss`: https://docs.joinmastodon.org/methods/grouped_notifications/#dismiss-group
+  - `POST /api/v2/notifications/:group_key/dimsiss`: https://docs.joinmastodon.org/methods/grouped_notifications/#dismiss-group
   - `GET /api/v2/notifications/:unread_count`: https://docs.joinmastodon.org/methods/grouped_notifications/#unread-group-count
 - **Add notification policies, filtered notifications and notification requests** (#29366, #29529, #29433, #29565, #29567, #29572, #29575, #29588, #29646, #29652, #29658, #29666, #29693, #29699, #29737, #29706, #29570, #29752, #29810, #29826, #30114, #30251, #30559, #29868, #31008, #31011, #30996, #31149, #31220, #31222, #31225, #31242, #31262, #31250, #31273, #31310, #31316, #31322, #31329, #31324, #31331, #31343, #31342, #31309, #31358, #31378, #31406, #31256, #31456, #31419, #31457, #31508, #31540, #31541, #31723, #32062 and #32281 by @ClearlyClaire, @Gargron, @TheEssem, @mgmn, @oneiros, and @renchap)\
   The old “Block notifications from non-followers”, “Block notifications from people you don't follow” and “Block direct messages from people you don't follow” notification settings have been replaced by a new set of settings found directly in the notification column.\
@@ -518,7 +566,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix empty environment variables not using default nil value (#27400 by @renchap)
 - Fix language sorting in settings (#27158 by @gunchleoc)
 
-## [4.2.11] - 2024-08-16
+## |4.2.11] - 2024-08-16
 
 ### Added
 

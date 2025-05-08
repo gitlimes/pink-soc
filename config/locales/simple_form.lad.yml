@@ -308,8 +308,6 @@ lad:
         name: Etiketa
         trendable: Permite ke esta etiketa apareska en trendes
         usable: Permite ke publikasyones uzen esta etiketa lokalmente
-      terms_of_service_generator:
-        domain: Domeno
       user:
         role: Rolo
         time_zone: Zona de tiempo

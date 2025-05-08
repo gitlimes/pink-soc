@@ -9,16 +9,10 @@ class Vacuum::ImportsVacuum
   private
 
   def clean_unconfirmed_imports!
-    BulkImport
-      .confirmation_missed
-      .in_batches
-      .delete_all
+    BulkImport.state_unconfirmed.where(created_at: ..10.minutes.ago).in_batches.delete_all
   end
 
   def clean_old_imports!
-    BulkImport
-      .archival_completed
-      .in_batches
-      .delete_all
+    BulkImport.where(created_at: ..1.week.ago).in_batches.delete_all
   end
 end

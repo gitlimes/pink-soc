@@ -1,7 +1,6 @@
 import type {
   ApiAccountRelationshipSeveranceEventJSON,
   ApiAccountWarningJSON,
-  ApiAnnualReportEventJSON,
   BaseNotificationGroupJSON,
   ApiNotificationGroupJSON,
   ApiNotificationJSON,
@@ -67,12 +66,6 @@ export interface NotificationGroupSeveredRelationships
   event: AccountRelationshipSeveranceEvent;
 }
 
-type AnnualReportEvent = ApiAnnualReportEventJSON;
-export interface NotificationGroupAnnualReport
-  extends BaseNotification<'annual_report'> {
-  annualReport: AnnualReportEvent;
-}
-
 interface Report extends Omit<ApiReportJSON, 'target_account'> {
   targetAccountId: string;
 }
@@ -94,8 +87,7 @@ export type NotificationGroup =
   | NotificationGroupModerationWarning
   | NotificationGroupSeveredRelationships
   | NotificationGroupAdminSignUp
-  | NotificationGroupAdminReport
-  | NotificationGroupAnnualReport;
+  | NotificationGroupAdminReport;
 
 function createReportFromJSON(reportJSON: ApiReportJSON): Report {
   const { target_account, ...report } = reportJSON;
@@ -118,12 +110,6 @@ function createAccountWarningFromJSON(
 function createAccountRelationshipSeveranceEventFromJSON(
   eventJson: ApiAccountRelationshipSeveranceEventJSON,
 ): AccountRelationshipSeveranceEvent {
-  return eventJson;
-}
-
-function createAnnualReportEventFromJSON(
-  eventJson: ApiAnnualReportEventJSON,
-): AnnualReportEvent {
   return eventJson;
 }
 
@@ -163,6 +149,7 @@ export function createNotificationGroupFromJSON(
         event: createAccountRelationshipSeveranceEventFromJSON(group.event),
         sampleAccountIds,
       };
+
     case 'moderation_warning': {
       const { moderation_warning, ...groupWithoutModerationWarning } = group;
       return {
@@ -172,15 +159,7 @@ export function createNotificationGroupFromJSON(
         sampleAccountIds,
       };
     }
-    case 'annual_report': {
-      const { annual_report, ...groupWithoutAnnualReport } = group;
-      return {
-        ...groupWithoutAnnualReport,
-        partial: false,
-        annualReport: createAnnualReportEventFromJSON(annual_report),
-        sampleAccountIds,
-      };
-    }
+
     default:
       return {
         sampleAccountIds,

@@ -44,12 +44,24 @@ nan:
         instance_languages_dimension: Tsia̍p用ê語言
     statuses:
       language: 語言
+      title: 口座ê PO文
     trends:
       tags:
         dashboard:
           tag_languages_dimension: Tsia̍p用ê語言
+  auth:
+    privacy_policy_agreement_html: 我有讀，同意<a href="%{privacy_policy_path}" target="_blank">隱私權政策</a>
+    setup:
+      email_settings_hint_html: 請點gún所送ê連結來驗證 %{email}。Gún tī tsia等lí。
+    sign_up:
+      preamble: 用tī tsit臺Mastodon服侍器ê口座，lí thang跟tuè其他佇tsit ê網路ê lâng，無論in ê口座khǹg tī tueh。
+  imports:
+    overwrite_preambles:
+      blocking_html: Lí teh-beh用<strong>%{filename}</strong> 內底ê <strong>%{total_items} ê口座</strong>，替換lí ê封鎖列單。
+    preambles:
+      muting_html: Lí teh-beh kā <strong>%{filename}</strong>內底ê<strong>%{total_items} ê口座</strong><strong>消音</strong>。
   scheduled_statuses:
-    too_soon: Tio̍h用未來ê日期。
+    too_soon: 預定PO文ê時間kan-ta tī未來
   statuses:
     default_language: Kap界面ê語言sio kâng
   user_mailer:

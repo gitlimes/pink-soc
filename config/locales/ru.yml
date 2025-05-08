@@ -193,7 +193,6 @@ ru:
         create_domain_block: Блокировка доменов
         create_email_domain_block: Создание доменных блокировок e-mail
         create_ip_block: Создание правил для IP-адресов
-        create_relay: Создание ретранслятора
         create_unavailable_domain: Добавление домена в список недоступных
         create_user_role: Создание ролей
         demote_user: Разжалование пользователей
@@ -205,22 +204,18 @@ ru:
         destroy_email_domain_block: Удаление доменных блокировок e-mail
         destroy_instance: Очистить домен
         destroy_ip_block: Удаление правил для IP-адресов
-        destroy_relay: Удаление ретранслятора
         destroy_status: Удаление постов
         destroy_unavailable_domain: Исключение доменов из списка недоступных
         destroy_user_role: Удаление ролей
         disable_2fa_user: Отключение 2FA
         disable_custom_emoji: Отключение эмодзи
-        disable_relay: Отключение ретранслятора
         disable_sign_in_token_auth_user: Отключение аутентификации по e-mail кодам
         disable_user: Заморозка пользователей
         enable_custom_emoji: Включение эмодзи
-        enable_relay: Включение ретранслятора
         enable_sign_in_token_auth_user: Включение аутентификации по e-mail кодам
         enable_user: Разморозка пользователей
         memorialize_account: Присвоение пользователям статуса «мемориала»
         promote_user: Повышение пользователей
-        publish_terms_of_service: Опубликование пользовательского соглашения
         reject_appeal: Отклонение обжалований
         reject_user: Отклонение регистраций
         remove_avatar_user: Удаление аватаров
@@ -258,7 +253,6 @@ ru:
         create_domain_block_html: "%{name} заблокировал(а) домен %{target}"
         create_email_domain_block_html: "%{name} заблокировал(а) e-mail домен %{target}"
         create_ip_block_html: "%{name} создал(а) правило для IP %{target}"
-        create_relay_html: "%{name} создал(а) ретранслятор %{target}"
         create_unavailable_domain_html: "%{name} приостановил доставку на узел %{target}"
         create_user_role_html: "%{name} создал(а) роль %{target}"
         demote_user_html: "%{name} разжаловал(а) пользователя %{target}"
@@ -270,27 +264,23 @@ ru:
         destroy_email_domain_block_html: "%{name} снял(а) блокировку с e-mail домена %{target}"
         destroy_instance_html: "%{name} очистил(а) данные для домена %{target}"
         destroy_ip_block_html: "%{name} удалил(а) правило для IP %{target}"
-        destroy_relay_html: "%{name} удалил(а) ретранслятор %{target}"
         destroy_status_html: "%{name} удалил(а) пост пользователя %{target}"
         destroy_unavailable_domain_html: "%{name} возобновил доставку на узел %{target}"
         destroy_user_role_html: "%{name} удалил(а) роль %{target}"
         disable_2fa_user_html: "%{name} отключил(а) требование двухэтапной авторизации для пользователя %{target}"
         disable_custom_emoji_html: "%{name} отключил(а) эмодзи %{target}"
-        disable_relay_html: "%{name} отключил(а) ретранслятор %{target}"
         disable_sign_in_token_auth_user_html: "%{name} отключил(а) аутентификацию по e-mail кодам для %{target}"
         disable_user_html: "%{name} заморозил(а) пользователя %{target}"
         enable_custom_emoji_html: "%{name} включил(а) эмодзи %{target}"
-        enable_relay_html: "%{name} включил(а) ретранслятор %{target}"
         enable_sign_in_token_auth_user_html: "%{name} включил(а) аутентификацию по e-mail кодам для %{target}"
         enable_user_html: "%{name} разморозил(а) пользователя %{target}"
         memorialize_account_html: "%{name} перевел(а) учётную запись пользователя %{target} в статус памятника"
         promote_user_html: "%{name} повысил(а) пользователя %{target}"
-        publish_terms_of_service_html: "%{name} опубликовал(а) обновление пользовательского соглашения"
         reject_appeal_html: "%{name} отклонил(а) обжалование действий модерации от %{target}"
         reject_user_html: "%{name} отклонил(а) регистрацию %{target}"
         remove_avatar_user_html: "%{name} убрал(а) аватарку пользователя %{target}"
         reopen_report_html: "%{name} повторно открыл(а) жалобу %{target}"
-        resend_user_html: "%{name} повторно отправил письмо с подтверждением для %{target}"
+        resend_user_html: "%{name} повторно отправил(а) письмо с подтверждением для %{target}"
         reset_password_user_html: "%{name} сбросил(а) пароль пользователя %{target}"
         resolve_report_html: "%{name} решил(а) жалобу %{target}"
         sensitive_account_html: "%{name} установил(а) отметку файлов %{target} как «деликатного характера»"
@@ -315,7 +305,6 @@ ru:
       title: Журнал аудита
       unavailable_instance: "(доменное имя недоступно)"
     announcements:
-      back: Вернуться к объявлениям
       destroyed_msg: Объявление удалено.
       edit:
         title: Редактировать объявление
@@ -324,9 +313,6 @@ ru:
       new:
         create: Создать объявление
         title: Новое объявление
-      preview:
-        explanation_html: 'Сообщение будет отравлено <strong>%{display_count} пользователям</strong>. В теле письма будет указан следующий текст:'
-        title: Предпросмотр объявления по электронной почте
       publish: Опубликовать
       published_msg: Объявление опубликовано.
       scheduled_for: Запланировано на %{time}
@@ -475,7 +461,7 @@ ru:
         create: Создать блокировку
         resolve: Проверить домен
         title: Блокировка нового почтового домена
-      no_email_domain_block_selected: Блоки почтовых доменов не были изменены, так как ни один из них не был выбран
+      no_email_domain_block_selected: Блокировки почтовых доменов не были изменены, так как ни один из них не был выбран
       not_permitted: Не разрешено
       resolved_dns_records_hint_html: Доменное имя указывает на следующие MX-домены, которые в конечном итоге отвечают за прием электронной почты. Блокировка MX-домена будет блокировать регистрации с любого адреса электронной почты, который использует тот же MX-домен, даже если видимое доменное имя отличается от него. <strong>Будьте осторожны, чтобы не заблокировать основных провайдеров электронной почты</strong>
       resolved_through_html: Разрешено через %{domain}
@@ -643,7 +629,7 @@ ru:
         suspend_description_html: Аккаунт и все его содержимое будут недоступны и в конечном итоге удалены, и взаимодействие с ним будет невозможно. Это действие можно отменить в течение 30 дней. Отменяет все жалобы против этого аккаунта.
       actions_description_html: Выберите действие, чтобы разрешить данную жалобу. Если вы примете меры модерации против аккаунта, его владелец получит уведомление по электронной почте, кроме тех случаев, когда выбрана категория <strong>Спам</strong>.
       actions_description_remote_html: Решите вопрос о том, какие меры необходимо принять для урегулирования этой жалобы. Это повлияет только на то, как <strong>ваш</strong> сервер взаимодействует с этим удаленным аккаунтом и обрабатывает его содержимое.
-      actions_no_posts: У этого отчета нет связанных с ним сообщений для удаления
+      actions_no_posts: У этой жалобы нет связанных с ней постов для удаления
       add_to_report: Прикрепить ещё
       already_suspended_badges:
         local: На этом сервере уже забанен
@@ -684,7 +670,7 @@ ru:
       report: Жалоба №%{id}
       reported_account: Учётная запись нарушителя
       reported_by: Отправитель жалобы
-      reported_with_application: Сообщается с приложением
+      reported_with_application: Использованное для отправки жалобы приложение
       resolved: Решённые
       resolved_msg: Жалоба обработана, спасибо!
       skip_to_actions: Перейти к действиям
@@ -832,7 +818,7 @@ ru:
           approved: Для регистрации требуется подтверждение
           none: Никто не может регистрироваться
           open: Все могут регистрироваться
-        warning_hint: Мы рекомендуем использовать "Требуется одобрение для регистрации", если вы не уверены, что ваша команда модераторов сможет своевременно справиться со спамом и вредоносными регистрациями.
+        warning_hint: Мы рекомендуем использовать "Требуется одобрение для регистрации", если вы не уверены, что ваша команда модераторов сможет своевременно справиться со спамом и злоумышленными регистрациями.
       security:
         authorized_fetch: Требовать аутентификацию от федеративных серверов
         authorized_fetch_hint: Требование аутентификации от федеративных серверов позволяет более строго соблюдать блокировки как на уровне пользователя, так и на уровне сервера. Однако при этом снижается производительность, уменьшается охват ваших ответов и могут возникнуть проблемы совместимости с некоторыми федеративными сервисами. Кроме того, это не помешает специальным исполнителям получать ваши публичные сообщения и учётные записи.
@@ -860,10 +846,8 @@ ru:
       back_to_account: Назад к учётной записи
       back_to_report: Вернуться к жалобе
       batch:
-        add_to_report: Добавить к жалобе №%{id}
         remove_from_report: Убрать из жалобы
         report: Пожаловаться
-      contents: Содержание
       deleted: Удалено
       favourites: Избранное
       history: История версий
@@ -872,17 +856,13 @@ ru:
       media:
         title: Файлы мультимедиа
       metadata: Метаданные
-      no_history: Этот пост не редактировался
       no_status_selected: Ничего не изменилось, так как ни один пост не был выделен
       open: Открыть запись
       original_status: Оригинальный пост
       reblogs: Продвинули
-      replied_to_html: Ответ пользователю %{acct_link}
       status_changed: Пост изменен
-      status_title: Пост пользователя @%{name}
-      title: Посты пользователя - @%{name}
+      title: Посты пользователя
       trending: Популярное
-      view_publicly: Открыть по публичной ссылке
       visibility: Видимость
       with_media: С файлами
     strikes:
@@ -942,55 +922,23 @@ ru:
     tags:
       moderation:
         not_trendable: Не в тренде
-        not_usable: Невозможно использовать
-        pending_review: В ожидании обзора
-        review_requested: Обзор запрошен
-        reviewed: Рассмотрено
+        not_usable: Недоступный
+        pending_review: На рассмотрении
+        review_requested: Запрошено рассмотрение
+        reviewed: Рассмотренный
         title: Статус
-        trendable: Трендовый
-        unreviewed: Без рецензии
-        usable: Полезное
+        trendable: В тренде
+        unreviewed: Нерассмотренный
+        usable: Доступный
       name: Название
-      newest: Новейший
-      oldest: Старейший
+      newest: Сначала новые
+      oldest: Сначала старые
       open: Посмотреть публично
-      reset: Сброс
+      reset: Сбросить
       review: Состояние проверки
       search: Поиск
       title: Хэштеги
       updated_msg: Настройки хэштега обновлены
-    terms_of_service:
-      back: Назад к пользовательскому соглашению
-      changelog: Что изменилось
-      create: Использовать свой текст
-      current: Действующее
-      draft: Черновик
-      generate: Использовать шаблон
-      generates:
-        action: Генерировать
-        chance_to_review_html: "<strong>Сгенерированное пользовательское соглашение не будет опубликовано автоматически.</strong> У вас будет возможность просмотреть результат. Введите все необходимые сведения, чтобы продолжить."
-        explanation_html: Шаблон пользовательского соглашения приводится исключительно в ознакомительных целях, и не может рассматриваться как юридическая консультация по тому или иному вопросу. Обратитесь к своему юрисконсульту насчёт вашей ситуации и имеющихся правовых вопросов.
-        title: Создание пользовательского соглашения
-      going_live_on_html: Вступило в силу с %{date}
-      history: История
-      live: Действует
-      no_history: Нет зафиксированных изменений пользовательского соглашения.
-      no_terms_of_service_html: На данный момент у вас отсутствует пользовательское соглашение. Пользовательское соглашение призвано обеспечить ясность и защитить вас от возможной ответственности в спорных ситуациях с пользователями.
-      notified_on_html: 'Дата уведомления пользователей: %{date}'
-      notify_users: Уведомить пользователей
-      preview:
-        explanation_html: 'Сообщение будет отравлено <strong>%{display_count} пользователям</strong>, которые зарегистрировались до %{date}. В теле письма будет указан следующий текст:'
-        send_preview: Отправить предпросмотр на %{email}
-        send_to_all:
-          few: Отправить %{display_count} сообщения
-          many: Отправить %{display_count} сообщений
-          one: Отправить %{display_count} сообщение
-          other: Отправить %{display_count} сообщений
-        title: Предпросмотр уведомления об изменении пользовательского соглашения
-      publish: Опубликовать
-      published_on_html: 'Дата публикации: %{date}'
-      save_draft: Сохранить черновик
-      title: Пользовательское соглашение
     title: Администрирование
     trends:
       allow: Разрешить
@@ -1004,7 +952,7 @@ ru:
         confirm_allow: Вы уверены, что хотите разрешить выбранные ссылки?
         confirm_allow_provider: Вы уверены, что хотите разрешить выбранных провайдеров?
         confirm_disallow: Вы уверены, что хотите запретить выбранные ссылки?
-        confirm_disallow_provider: Вы уверены, что хотите запретить выбранных поставщиков?
+        confirm_disallow_provider: Вы уверены, что хотите запретить выбранных провайдеров?
         description_html: Это ссылки, которыми в настоящее время много пользуются аккаунты, с которых ваш сервер видит сообщения. Это может помочь вашим пользователям узнать, что происходит в мире. Никакие ссылки не отображаются публично, пока вы не одобрите издателя. Вы также можете разрешить или отклонить индивидуальные ссылки.
         disallow: Запретить ссылку
         disallow_provider: Отклонить издание
@@ -1070,14 +1018,14 @@ ru:
           many: За последнюю неделю использовало %{count} человек
           one: За последнюю неделю использовал один человек
           other: За последнюю неделю использовал %{count} человек
-      title: Рекомендации и тенденции
+      title: Рекомендации и тренды
       trending: Популярное
     warning_presets:
       add_new: Добавить
       delete: Удалить
       edit_preset: Удалить шаблон предупреждения
       empty: Вы еще не определили пресеты предупреждений.
-      title: Предупреждающие пред установки
+      title: Шаблоны предупреждений
     webhooks:
       add_new: Добавить конечную точку
       delete: Удалить
@@ -1206,6 +1154,7 @@ ru:
     migrate_account: Перенос учётной записи
     migrate_account_html: Завели новую учётную запись? Перенаправьте подписчиков на неё — <a href="%{path}">настройте перенаправление тут</a>.
     or_log_in_with: Или войти с помощью
+    privacy_policy_agreement_html: Мной прочитана и принята <a href="%{privacy_policy_path}" target="_blank">политика конфиденциальности</a>
     progress:
       confirm: Подтвердите электронную почту
       details: Ваши данные
@@ -1230,7 +1179,7 @@ ru:
     set_new_password: Задать новый пароль
     setup:
       email_below_hint_html: Проверьте папку "Спам" или запросите другую. Вы можете исправить свой адрес электронной почты, если он неправильный.
-      email_settings_hint_html: Чтобы начать пользоваться Mastodon, пройдите по ссылке, которую мы отправили на %{email}. А мы пока подождём тут.
+      email_settings_hint_html: Нажмите на ссылку, которую мы отправили вам для проверки %{email}. Мы будем ждать прямо здесь.
       link_not_received: Не получили ссылку?
       new_confirmation_instructions_sent: Через несколько минут вы получите новое письмо со ссылкой для подтверждения!
       title: Проверьте свой почтовый ящик
@@ -1239,7 +1188,7 @@ ru:
       title: Войти в %{domain}
     sign_up:
       manual_review: Регистрация на %{domain} проходит через ручную проверку нашими модераторами. Чтобы помочь нам обработать вашу регистрацию, напишите немного о себе и о том, почему вы хотите получить аккаунт на %{domain}.
-      preamble: С учётной записью на этом сервере Mastodon вы сможете подписываться на всех других людей в федиверсе вне зависимости от того, где находятся их учётные записи.
+      preamble: С учётной записью на этом сервере Mastodon вы сможете следить за любым другим пользователем в сети, независимо от того, где размещён их аккаунт.
       title: Зарегистрируйтесь в %{domain}.
     status:
       account_status: Статус учётной записи
@@ -1251,8 +1200,6 @@ ru:
       view_strikes: Просмотр предыдущих замечаний в адрес вашей учетной записи
     too_fast: Форма отправлена слишком быстро, попробуйте еще раз.
     use_security_key: Использовать ключ безопасности
-    user_agreement_html: Мной прочитаны и приняты<a href="%{terms_of_service_path}" target="_blank">пользовательское соглашение</a> и <a href="%{privacy_policy_path}" target="_blank">политика конфиденциальности</a>
-    user_privacy_agreement_html: Мной прочитана и принята <a href="%{privacy_policy_path}" target="_blank">политика конфиденциальности</a>
   author_attribution:
     example_title: Образец текста
     hint_html: Публикуете ли вы свои статьи где-либо ещё кроме Mastodon? Если да, то ваше авторство может быть упомянуто, когда ими делятся в Mastodon.
@@ -1472,67 +1419,19 @@ ru:
       overwrite: Перезаписать
       overwrite_long: Перезаписать имеющиеся данные новыми.
     overwrite_preambles:
-      blocking_html:
-        few: Вы собираетесь <strong>заменить свой список блокировки</strong>, в котором сейчас <strong>%{count} аккаунта</strong>, из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>заменить свой список блокировки</strong>, в котором сейчас <strong>%{count} аккаунов</strong>, из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>заменить свой список блокировки</strong>, в котором сейчас <strong>%{count} аккаунт</strong>, из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>заменить свой список блокировки</strong>, в котором сейчас <strong>%{count} аккаунтов</strong>, из файла <strong>%{filename}</strong>.
-      bookmarks_html:
-        few: Вы собираетесь <strong>заменить свои закладки</strong>, в которых сейчас <strong>%{count} поста</strong>, из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>заменить свои закладки</strong>, в которых сейчас <strong>%{count} постов</strong>, из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>заменить свои закладки</strong>, в которых сейчас <strong>%{count} пост</strong>, из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>заменить свои закладки</strong>, в которых сейчас <strong>%{count} постов</strong>, из файла <strong>%{filename}</strong>.
-      domain_blocking_html:
-        few: Вы собираетесь <strong>заменить свой список доменных блокировок</strong>, в котором сейчас <strong>%{count} домена</strong>, из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>заменить свой список доменных блокировок</strong>, в котором сейчас <strong>%{count} доменов</strong>, из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>заменить свой список доменных блокировок</strong>, в котором сейчас <strong>%{count} домен</strong>, из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>заменить свой список доменных блокировок</strong>, в котором сейчас <strong>%{count} доменов</strong>, из файла <strong>%{filename}</strong>.
-      following_html:
-        few: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунта</strong> из файла <strong>%{filename}</strong> и <strong>отписаться от всех прочих</strong>.
-        many: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong> и <strong>отписаться от всех прочих</strong>.
-        one: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунт</strong> из файла <strong>%{filename}</strong> и <strong>отписаться от всех прочих</strong>.
-        other: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong> и <strong>отписаться от всех прочих</strong>.
-      lists_html:
-        few: Вы собираетесь <strong>заменить свои списки</strong> содержимым файла <strong>%{filename}</strong>. В новые списки будут добавлены <strong>%{count} аккаунта</strong>.
-        many: Вы собираетесь <strong>заменить свои списки</strong> содержимым файла <strong>%{filename}</strong>. В новые списки будут добавлены <strong>%{count} аккаунтов</strong>.
-        one: Вы собираетесь <strong>заменить свои списки</strong> содержимым файла <strong>%{filename}</strong>. В новые списки будет добавлен <strong>%{count} аккаунт</strong>.
-        other: Вы собираетесь <strong>заменить свои списки</strong> содержимым файла <strong>%{filename}</strong>. В новые списки будут добавлены <strong>%{count} аккаунтов</strong>.
-      muting_html:
-        few: Вы собираетесь <strong>заменить свой список игнорируемых пользователей</strong> списком из <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>заменить свой список игнорируемых пользователей</strong> списком из <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>заменить свой список игнорируемых пользователей</strong> списком из <strong>%{count} аккаунта</strong> из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>заменить свой список игнорируемых пользователей</strong> списком из <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
+      blocking_html: Вы собираетесь <strong>заменить свой блок-лист</strong> на <strong>%{total_items} аккаунтов</strong> из <strong>%{filename}</strong>.
+      bookmarks_html: Вы собираетесь <strong>заменить свои закладки</strong> на <strong>%{total_items} постов</strong> из <strong>%{filename}</strong>.
+      domain_blocking_html: Вы собираетесь <strong>заменить ваш список блокировки доменов</strong> на <strong>%{total_items} доменов</strong> из <strong>%{filename}</strong>.
+      following_html: Вы собираетесь <strong>следить</strong> за <strong>%{total_items} аккаунтами</strong> из <strong>%{filename}</strong> и <strong>прекратить следить за всеми остальными</strong>.
+      lists_html: Вы собираетесь <strong>заменить ваши списки</strong> содержимым <strong>%{filename}</strong>. До <strong>%{total_items} аккаунты</strong> будут добавлены в новые списки.
+      muting_html: Вы собираетесь <strong>заменить список отключенных аккаунтов</strong> на <strong>%{total_items} аккаунтов</strong> из <strong>%{filename}</strong>.
     preambles:
-      blocking_html:
-        few: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} аккаунта</strong> из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} аккаунт</strong> из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-      bookmarks_html:
-        few: Вы собираетесь добавить <strong>%{count} поста</strong> из файла <strong>%{filename}</strong> в свои <strong>закладки</strong>.
-        many: Вы собираетесь добавить <strong>%{count} постов</strong> из файла <strong>%{filename}</strong> в свои <strong>закладки</strong>.
-        one: Вы собираетесь добавить <strong>%{count} пост</strong> из файла <strong>%{filename}</strong> в свои <strong>закладки</strong>.
-        other: Вы собираетесь добавить <strong>%{count} постов</strong> из файла <strong>%{filename}</strong> в свои <strong>закладки</strong>.
-      domain_blocking_html:
-        few: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} домена</strong> из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} доменов</strong> из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} домен</strong> из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>заблокировать</strong> <strong>%{count} доменов</strong> из файла <strong>%{filename}</strong>.
-      following_html:
-        few: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунта</strong> из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунт</strong> из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>подписаться</strong> на <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-      lists_html:
-        few: Вы собираетесь добавить <strong>%{count} аккаунта</strong> из файла <strong>%{filename}</strong> в свои <strong>списки</strong>. Если соответствующих списков нет, они будут созданы.
-        many: Вы собираетесь добавить <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong> в свои <strong>списки</strong>. Если соответствующих списков нет, они будут созданы.
-        one: Вы собираетесь добавить <strong>%{count} аккаунт</strong> из файла <strong>%{filename}</strong> в свои <strong>списки</strong>. Если соответствующих списков нет, они будут созданы.
-        other: Вы собираетесь добавить <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong> в свои <strong>списки</strong>. Если соответствующих списков нет, они будут созданы.
-      muting_html:
-        few: Вы собираетесь <strong>начать игнорировать</strong> <strong>%{count} аккаунта</strong> из файла <strong>%{filename}</strong>.
-        many: Вы собираетесь <strong>начать игнорировать</strong> <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
-        one: Вы собираетесь <strong>начать игнорировать</strong> <strong>%{count} аккаунт</strong> из файла <strong>%{filename}</strong>.
-        other: Вы собираетесь <strong>начать игнорировать</strong> <strong>%{count} аккаунтов</strong> из файла <strong>%{filename}</strong>.
+      blocking_html: Вы собираетесь <strong>заблокировать</strong> до <strong>%{total_items} аккаунтов</strong> из <strong>%{filename}</strong>.
+      bookmarks_html: Вы собираетесь добавить до <strong>%{total_items} постов</strong> из <strong>%{filename}</strong> в свои <strong>закладки</strong>.
+      domain_blocking_html: Вы собираетесь <strong>блокировать</strong> до <strong>%{total_items} доменов</strong> от <strong>%{filename}</strong>.
+      following_html: Вы собираетесь <strong>следовать</strong> за <strong>%{total_items} аккаунтами</strong> из <strong>%{filename}</strong>.
+      lists_html: Вы собираетесь добавить до <strong>%{total_items} аккаунтов</strong> от <strong>%{filename}</strong> к вашим <strong>спискам</strong>. Новые списки будут созданы, если нет списка для добавления.
+      muting_html: Вы собираетесь <strong>отключить</strong> до <strong>%{total_items} аккаунтов</strong> из <strong>%{filename}</strong>.
     preface: Вы можете загрузить некоторые данные, например, списки людей, на которых Вы подписаны или которых блокируете, в Вашу учётную запись на этом узле из файлов, экспортированных с другого узла.
     recent_imports: Недавно импортированное
     states:
@@ -1791,7 +1690,7 @@ ru:
   scheduled_statuses:
     over_daily_limit: Вы превысили лимит в %{limit} запланированных постов на указанный день
     over_total_limit: Вы превысили лимит на %{limit} запланированных постов
-    too_soon: дата публикации должна быть в будущем
+    too_soon: Запланированная дата должна быть в будущем
   self_destruct:
     lead_html: К сожалению, <strong>%{domain}</strong> закрывается навсегда. Если вас учётная запись находиться здесь вы не сможете продолжить использовать его, но вы можете запросить резервную копию ваших данных.
     title: Этот сервер закрывается
@@ -1872,7 +1771,7 @@ ru:
       domain_block: Приостановка сервера (%{target_name})
       user_domain_block: Вы заблокировали %{target_name}
     lost_followers: Потерянные подписчики
-    lost_follows: Потерянный следует
+    lost_follows: Потерянные подписки
     preamble: Вы можете потерять подписчиков и последователей, если заблокируете домен или, если ваши модераторы решат приостановить работу удаленного сервера. Когда это произойдет, вы сможете загрузить списки разорванных отношений, чтобы проверить их и, возможно, импортировать на другой сервер.
     purged: Информация об этом сервере была удалена администраторами вашего сервера.
     type: Событие
@@ -1962,8 +1861,6 @@ ru:
       too_late: Слишком поздно обжаловать это замечание
   tags:
     does_not_match_previous_name: не совпадает с предыдущим именем
-  terms_of_service:
-    title: Пользовательское соглашение
   themes:
     contrast: Mastodon (высококонтрастная)
     default: Mastodon (тёмная)
@@ -1995,10 +1892,6 @@ ru:
     recovery_instructions_html: 'Пожалуйста, сохраните коды ниже в надёжном месте: они понадобятся, чтобы войти в учётную запись, если вы потеряете доступ к своему смартфону. Вы можете вручную переписать их, распечатать и спрятать среди важных документов или, например, в любимой книжке. <strong>Каждый код действителен только один раз</strong>.'
     webauthn: Ключи безопасности
   user_mailer:
-    announcement_published:
-      description: 'Администраторы %{domain} опубликовали новое объявление:'
-      subject: Сервисное объявление
-      title: Сервисное объявление %{domain}
     appeal_approved:
       action: Настройки аккаунта
       explanation: Апелляция на разблокировку против вашей учетной записи %{strike_date}, которую вы подали на %{appeal_date}, была одобрена. Ваша учетная запись снова на хорошем счету.
@@ -2028,15 +1921,6 @@ ru:
       further_actions_html: Если это были не вы, рекомендуем вам немедленно %{action} и включить двухфакторную авторизацию, чтобы обезопасить свою учётную запись.
       subject: В вашу учётную запись был выполнен вход с нового IP-адреса
       title: Выполнен вход
-    terms_of_service_changed:
-      agreement: Продолжая использовать %{domain}, вы соглашаетесь с этими условиями. Если вы не согласны с новыми условиями, вы в любой момент можете удалить вашу учётную запись на %{domain}.
-      changelog: 'Вот что обновление условий будет значит для вас в общих чертах:'
-      description: 'Вы получили это сообщение, потому что мы внесли некоторые изменения в пользовательское соглашение %{domain}. Эти изменения вступят в силу %{date}. Рекомендуем вам ознакомиться с обновлёнными условиями по ссылке:'
-      description_html: Вы получили это сообщение, потому что мы внесли некоторые изменения в пользовательское соглашение %{domain}. Эти изменения вступят в силу <strong>%{date}</strong>. Рекомендуем вам ознакомиться с <a href="%{path}" target="_blank">обновлёнными условиями</a>.
-      sign_off: Ваш %{domain}
-      subject: Обновления наших условий использования
-      subtitle: На %{domain} изменилось пользовательское соглашение
-      title: Важное обновление
     warning:
       appeal: Обжаловать
       appeal_description: Если вы считаете, что это ошибка, вы можете обратиться к поддержке %{instance}.
