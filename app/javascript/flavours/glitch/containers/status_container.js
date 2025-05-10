@@ -26,6 +26,7 @@ import {
   unmuteStatus,
   deleteStatus,
   toggleStatusSpoilers,
+  toggleStatusCollapse,
   editStatus,
   translateStatus,
   undoStatusTranslation,
@@ -45,10 +46,7 @@ const makeMapStateToProps = () => {
     let account = undefined;
     let prepend = undefined;
 
-    if (props.featured && status) {
-      account = status.get('account');
-      prepend = 'featured';
-    } else if (reblogStatus !== null && typeof reblogStatus === 'object') {
+    if (reblogStatus !== null && typeof reblogStatus === 'object') {
       account = status.get('account');
       status = reblogStatus;
       prepend = 'reblogged_by';
@@ -190,6 +188,11 @@ const mapDispatchToProps = (dispatch, { contextType }) => ({
   onToggleHidden (status) {
     dispatch(toggleStatusSpoilers(status.get('id')));
   },
+
+  onToggleCollapsed (status, isCollapsed) {
+    dispatch(toggleStatusCollapse(status.get('id'), isCollapsed));
+  },
+
 
   deployPictureInPicture (status, type, mediaProps) {
     dispatch((_, getState) => {

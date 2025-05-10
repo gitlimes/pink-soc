@@ -28,6 +28,28 @@ module DomainHelpers
       .and_yield(resolver)
   end
 
+<<<<<<< HEAD
+=======
+  def configure_dns(domain:, results:)
+    resolver = instance_double(Resolv::DNS, :timeouts= => nil)
+
+    allow(resolver).to receive(:getresources)
+      .with(domain, Resolv::DNS::Resource::IN::MX)
+      .and_return(results)
+    allow(resolver)
+      .to receive(:getresources)
+      .with(domain, Resolv::DNS::Resource::IN::A)
+      .and_return(results)
+    allow(resolver)
+      .to receive(:getresources)
+      .with(domain, Resolv::DNS::Resource::IN::AAAA)
+      .and_return(results)
+    allow(Resolv::DNS)
+      .to receive(:open)
+      .and_yield(resolver)
+  end
+
+>>>>>>> upstream/main
   private
 
   def double_mx(exchange)

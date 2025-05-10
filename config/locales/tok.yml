@@ -36,6 +36,7 @@ tok:
       ip: nanpa IP
       joined: tenpo kama
       search: o alasa
+<<<<<<< HEAD
     statuses:
       title: toki suli pi jan ni
     tags:
@@ -47,5 +48,9 @@ tok:
       domain_blocking_html: "<strong>ma %{total_items}</strong> li lon lipu <strong>%{filename}</strong>. sina wile ala lukin e toki tan ma la, sina ni la <strong>kulupu pi lukin ala li kama</strong> kulupu lipu."
       following_html: "<strong>jan %{total_items}</strong> li lon lipu <strong>%{filename}</strong>. sina wile <strong>kute</strong> e jan la, sina ni la <strong>kulupu kute li kama</strong> kulupu lipu."
       lists_html: "<strong>jan %{total_items}</strong> li lon lipu <strong>%{filename}</strong>. sina jo e kulupu jan. sina ni la <strong>kulupu sina li weka</strong>, sina kama jo e kulupu lipu."
+=======
+    tags:
+      search: o alasa
+>>>>>>> upstream/main
   privacy:
     search: o alasa

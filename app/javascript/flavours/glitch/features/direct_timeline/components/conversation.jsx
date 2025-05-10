@@ -25,7 +25,7 @@ import { IconButton } from 'flavours/glitch/components/icon_button';
 import { Permalink } from 'flavours/glitch/components/permalink';
 import { RelativeTimestamp } from 'flavours/glitch/components/relative_timestamp';
 import StatusContent from 'flavours/glitch/components/status_content';
-import DropdownMenuContainer from 'flavours/glitch/containers/dropdown_menu_container';
+import { Dropdown } from 'flavours/glitch/components/dropdown_menu';
 import { autoPlayGif } from 'flavours/glitch/initial_state';
 import { makeGetStatus } from 'flavours/glitch/selectors';
 
@@ -62,19 +62,6 @@ export const Conversation = ({ conversation, scrollKey, onMoveUp, onMoveDown }) 
   // glitch-soc additions
   const sharedCWState = useSelector(state => state.getIn(['state', 'content_warnings', 'shared_state']));
   const [expanded, setExpanded] = useState(undefined);
-
-  const parseClick = useCallback((e, destination) => {
-    if (e.button === 0 && !(e.ctrlKey || e.altKey || e.metaKey)) {
-      if (destination === undefined) {
-        if (unread) {
-          dispatch(markConversationRead(id));
-        }
-        destination = `/statuses/${lastStatus.get('id')}`;
-      }
-      history.push(destination);
-      e.preventDefault();
-    }
-  }, [dispatch, history, unread, id, lastStatus]);
 
   const handleMouseEnter = useCallback(({ currentTarget }) => {
     if (autoPlayGif) {
@@ -190,11 +177,6 @@ export const Conversation = ({ conversation, scrollKey, onMoveUp, onMoveDown }) 
     toggleHidden: handleShowMore,
   };
 
-  let media = null;
-  if (lastStatus.get('media_attachments').size > 0) {
-    media = <AttachmentList compact media={lastStatus.get('media_attachments')} />;
-  }
-
   return (
     <HotKeys handlers={handlers}>
       <div className={classNames('conversation focusable muted', { unread })} tabIndex={0}>
@@ -215,18 +197,24 @@ export const Conversation = ({ conversation, scrollKey, onMoveUp, onMoveDown }) 
 
           <StatusContent
             status={lastStatus}
-            parseClick={parseClick}
+            onClick={handleClick}
             expanded={sharedCWState ? lastStatus.get('hidden') : expanded}
             onExpandedToggle={handleShowMore}
             collapsible
-            media={media}
           />
+
+          {lastStatus.get('media_attachments').size > 0 && (
+            <AttachmentList
+              compact
+              media={lastStatus.get('media_attachments')}
+            />
+          )}
 
           <div className='status__action-bar'>
             <IconButton className='status__action-bar-button' title={intl.formatMessage(messages.reply)} icon='reply' iconComponent={ReplyIcon} onClick={handleReply} />
 
             <div className='status__action-bar-dropdown'>
-              <DropdownMenuContainer
+              <Dropdown
                 scrollKey={scrollKey}
                 status={lastStatus}
                 items={menu}

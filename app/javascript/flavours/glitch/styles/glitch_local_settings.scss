@@ -1,3 +1,6 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
 .glitch.local-settings {
   position: relative;
   display: flex;
@@ -120,10 +123,6 @@
     &:hover {
       text-decoration: none;
     }
-  }
-
-  #mastodon-settings--collapsed-auto-height {
-    width: calc(4ch + 20px);
   }
 }
 
