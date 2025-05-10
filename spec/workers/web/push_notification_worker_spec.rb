@@ -50,25 +50,11 @@ RSpec.describe Web::PushNotificationWorker do
     before do
       Setting.site_contact_email = contact_email
 
-<<<<<<< HEAD
-      allow(Webpush::Encryption).to receive(:encrypt).and_return(payload)
-=======
->>>>>>> upstream/main
       allow(JWT).to receive(:encode).and_return('jwt.encoded.payload')
 
       stub_request(:post, endpoint).to_return(status: 201, body: '')
     end
 
-<<<<<<< HEAD
-    it 'calls the relevant service with the correct headers' do
-      subject.perform(subscription.id, notification.id)
-
-      expect(web_push_endpoint_request)
-        .to have_been_made
-    end
-
-    def web_push_endpoint_request
-=======
     it 'Legacy push calls the relevant service with the legacy headers' do
       allow(Webpush::Legacy::Encryption).to receive(:encrypt).and_return(legacy_payload)
 
@@ -98,7 +84,6 @@ RSpec.describe Web::PushNotificationWorker do
     # rubocop:enable RSpec/SubjectStub
 
     def legacy_web_push_endpoint_request
->>>>>>> upstream/main
       a_request(
         :post,
         endpoint
@@ -111,11 +96,6 @@ RSpec.describe Web::PushNotificationWorker do
           'Ttl' => '172800',
           'Urgency' => 'normal',
           'Authorization' => 'WebPush jwt.encoded.payload',
-<<<<<<< HEAD
-        },
-        body: "+\xB8\xDBT}\u0013\xB6\xDD.\xF9\xB0\xA7\xC8Ҁ\xFD\x99#\xF7\xAC\x83\xA4\xDB,\u001F\xB5\xB9w\x85>\xF7\xADr"
-      )
-=======
           'Unsubscribe-URL' => %r{/api/web/push_subscriptions/},
         },
         body: "+\xB8\xDBT}\u0013\xB6\xDD.\xF9\xB0\xA7\xC8Ҁ\xFD\x99#\xF7\xAC\x83\xA4\xDB,\u001F\xB5\xB9w\x85>\xF7\xADr"
@@ -143,7 +123,6 @@ RSpec.describe Web::PushNotificationWorker do
       # VapidKey contains a method to retrieve EC keypair from
       # B64 raw keys, the keypair is stored in curve field
       Webpush::VapidKey.from_keys(std_as_public, std_as_private).curve
->>>>>>> upstream/main
     end
   end
 end

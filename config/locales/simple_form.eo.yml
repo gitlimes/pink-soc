@@ -3,11 +3,7 @@ eo:
   simple_form:
     hints:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: Unu por linio. Protektas kontraŭ falsaj atribuoj.
-=======
         attribution_domains: Unu por linio. Protektas kontraŭ falsaj atribuoj.
->>>>>>> upstream/main
         discoverable: Viaj publikaj afiŝoj kaj profilo povas esti prezentitaj aŭ rekomenditaj en diversaj lokoj de Mastodon kaj via profilo povas esti proponita al aliaj uzantoj.
         display_name: Via plena nomo aŭ via kromnomo.
         fields: Via retpaĝo, pronomoj, aĝo, ĉio, kion vi volas.
@@ -64,10 +60,7 @@ eo:
         setting_display_media_default: Kaŝi plurmediojn markitajn kiel tiklaj
         setting_display_media_hide_all: Ĉiam kaŝi la vidaŭdaĵojn
         setting_display_media_show_all: Ĉiam montri la vidaŭdaĵojn
-<<<<<<< HEAD
-=======
         setting_system_scrollbars_ui: Aplikas nur por surtablaj retumiloj baziĝas de Safari kaj Chrome
->>>>>>> upstream/main
         setting_use_blurhash: Transirojn estas bazita sur la koloroj de la kaŝitaj aŭdovidaĵoj sed ne montri iun ajn detalon
         setting_use_pending_items: Kaŝi tempoliniajn ĝisdatigojn malantaŭ klako anstataŭ aŭtomate rulumi la fluon
         username: Vi povas uzi literojn, ciferojn kaj substrekojn
@@ -164,11 +157,7 @@ eo:
         url: Kien eventoj sendotas
     labels:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: Retejoj permesitaj krediti vin
-=======
         attribution_domains: Retejoj permesitaj krediti vin
->>>>>>> upstream/main
         discoverable: Elstarigi profilon kaj afiŝojn en eltrovantaj algoritmoj
         fields:
           name: Etikedo

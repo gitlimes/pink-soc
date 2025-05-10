@@ -41,8 +41,6 @@ RSpec.describe PollOptionsValidator do
         expect(errors).to have_received(:add)
       end
     end
-<<<<<<< HEAD
-=======
 
     describe 'character length of poll options' do
       context 'when poll has acceptable length options' do
@@ -69,6 +67,5 @@ RSpec.describe PollOptionsValidator do
         end
       end
     end
->>>>>>> upstream/main
   end
 end

@@ -3,22 +3,14 @@ zh-CN:
   simple_form:
     hints:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: 每行一个域名。这样就可以保护作品免受虚假署名。
-=======
         attribution_domains: 每行一个域名。这样就可以保护作品免受虚假署名。
->>>>>>> upstream/main
         discoverable: 你的公开嘟文和个人资料可能会在 Mastodon 的多个位置展示，你的个人资料可能会被推荐给其他用户。
         display_name: 你的全名或昵称。
         fields: 你的主页、人称代词、年龄，以及任何你想要添加的内容。
         indexable: 你的公开嘟文会出现在 Mastodon 的搜索结果中。无论是否勾选，与你的嘟文有过交互的人都可能通过搜索找到它们。
         note: '你可以提及 @其他人 或 #话题 。'
         show_collections: 人们将能够浏览你的关注和追随者。你关注的人会看到你关注他们。
-<<<<<<< HEAD
-        unlocked: 人们将能够在不请求批准的情况下关注你。如果你希望审核关注请求并选择接受或拒绝新的粉丝，请取消勾选此项。
-=======
         unlocked: 人们将能够在不请求批准的情况下关注你。如果你希望审核关注请求并选择接受或拒绝新的关注者，请取消勾选此项。
->>>>>>> upstream/main
       account_alias:
         acct: 指定你想要迁移过来的原账号：用户名@站点域名
       account_migration:
@@ -83,10 +75,7 @@ zh-CN:
       filters:
         action: 选择在嘟文命中过滤规则时要执行的操作
         actions:
-<<<<<<< HEAD
-=======
           blur: 将媒体隐藏在警告之后，且不隐藏文字
->>>>>>> upstream/main
           hide: 选择在嘟文命中过滤规则时要执行的操作
           warn: 显示带有过滤规则标题的警告，并隐藏过滤内容
       form_admin_settings:
@@ -100,10 +89,7 @@ zh-CN:
         favicon: WEBP、PNG、GIF 或 JPG。使用自定义图标覆盖 Mastodon 的默认图标。
         mascot: 覆盖高级网页界面中的绘图形象。
         media_cache_retention_period: 来自外站用户嘟文的媒体文件将被缓存到你的实例上。当该值被设为正值时，缓存的媒体文件将在指定天数后被清除。如果媒体文件在被清除后重新被请求，且源站内容仍然可用，它将被重新下载。由于链接预览卡拉取第三方站点的频率受到限制，建议将此值设置为至少 14 天，如果小于该值，链接预览卡将不会按需更新。
-<<<<<<< HEAD
-=======
         min_age: 用户注册时必须确认出生日期
->>>>>>> upstream/main
         peers_api_enabled: 本站在联邦宇宙中遇到的站点列表。 此处不包含关于您是否与给定站点联合的数据，只是您的实例知道它。 这由收集一般意义上的联合统计信息的服务使用。
         profile_directory: 个人资料目录会列出所有选择可被发现的用户。
         require_invite_text: 当注册需要手动批准时，将“你为什么想要加入？”设为必填项
@@ -162,10 +148,7 @@ zh-CN:
         min_age: 不应低于您所在地法律管辖权要求的最低年龄。
       user:
         chosen_languages: 仅选中语言的嘟文会出现在公共时间线上（全不选则显示所有语言的嘟文）
-<<<<<<< HEAD
-=======
         date_of_birth: 我们必须确认%{age}岁以上的用户才能使用Mastodon。我们不会存储该信息。
->>>>>>> upstream/main
         role: 角色用于控制用户拥有的权限。
       user_role:
         color: 在界面各处用于标记该角色的颜色，以十六进制 RGB 格式表示
@@ -179,11 +162,7 @@ zh-CN:
         url: 事件将被发往的目的地
     labels:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: 授权展示你的署名的网站
-=======
         attribution_domains: 授权展示你的署名的网站
->>>>>>> upstream/main
         discoverable: 在发现算法中展示你的账号与嘟文
         fields:
           name: 标签
@@ -360,8 +339,6 @@ zh-CN:
         name: 话题
         trendable: 允许在热门下显示此话题
         usable: 允许本站嘟文使用此话题
-<<<<<<< HEAD
-=======
       terms_of_service:
         changelog: 变更说明
         effective_date: 生效日期
@@ -376,7 +353,6 @@ zh-CN:
         domain: 域名
         jurisdiction: 法律管辖区
         min_age: 最低年龄
->>>>>>> upstream/main
       user:
         date_of_birth_1i: 日
         date_of_birth_2i: 月

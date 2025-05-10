@@ -49,12 +49,8 @@
     "@formatjs/intl-pluralrules": "^5.4.4",
     "@gamestdio/websocket": "^0.3.2",
     "@github/webauthn-json": "^2.1.1",
-<<<<<<< HEAD
-    "@rails/ujs": "7.1.401",
-=======
     "@rails/ujs": "7.1.501",
     "@react-spring/web": "^9.7.5",
->>>>>>> upstream/main
     "@reduxjs/toolkit": "^2.0.1",
     "@svgr/webpack": "^5.5.0",
     "@use-gesture/react": "^10.3.1",

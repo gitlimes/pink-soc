@@ -211,10 +211,7 @@ zh-CN:
         enable_user: 启用用户
         memorialize_account: 设为追悼账号
         promote_user: 指派管理员
-<<<<<<< HEAD
-=======
         publish_terms_of_service: 发布服务条款
->>>>>>> upstream/main
         reject_appeal: 驳回申诉
         reject_user: 拒绝用户
         remove_avatar_user: 移除头像
@@ -279,10 +276,7 @@ zh-CN:
         enable_user_html: "%{name} 将用户 %{target} 设置为允许登录"
         memorialize_account_html: "%{name} 将 %{target} 设置为追悼账号"
         promote_user_html: "%{name} 将用户 %{target} 设为管理员"
-<<<<<<< HEAD
-=======
         publish_terms_of_service_html: "%{name} 更新了服务条款"
->>>>>>> upstream/main
         reject_appeal_html: "%{name} 驳回了 %{target} 对审核结果的申诉"
         reject_user_html: "%{name} 拒绝了用户 %{target} 的注册"
         remove_avatar_user_html: "%{name} 删除了 %{target} 的头像"
@@ -851,10 +845,7 @@ zh-CN:
       back_to_account: 返回账号信息页
       back_to_report: 返回举报页
       batch:
-<<<<<<< HEAD
-=======
         add_to_report: '添加到举报 #%{id}'
->>>>>>> upstream/main
         remove_from_report: 从举报中移除
         report: 举报
       contents: 内容
@@ -873,12 +864,8 @@ zh-CN:
       reblogs: 转发
       replied_to_html: 回复 %{acct_link}
       status_changed: 嘟文已编辑
-<<<<<<< HEAD
-      title: 账号嘟文
-=======
       status_title: "@%{name} 的嘟文"
       title: 该账号的嘟文 - @%{name}
->>>>>>> upstream/main
       trending: 当前热门
       view_publicly: 以公开身份查看
       visibility: 可见性
@@ -957,8 +944,6 @@ zh-CN:
       search: 搜索
       title: 话题
       updated_msg: 话题设置更新成功
-<<<<<<< HEAD
-=======
     terms_of_service:
       back: 返回服务条款页
       changelog: 变更说明
@@ -988,7 +973,6 @@ zh-CN:
       published_on_html: 发表于 %{date}
       save_draft: 保存草稿
       title: 服务条款
->>>>>>> upstream/main
     title: 管理
     trends:
       allow: 允许
@@ -1216,11 +1200,7 @@ zh-CN:
     set_new_password: 设置新密码
     setup:
       email_below_hint_html: 请检查你的垃圾邮件文件夹，或请求重新发送邮件。如果你填写的邮箱地址有误，请更正。
-<<<<<<< HEAD
-      email_settings_hint_html: 请点击我们发送给 %{email} 地址中的确认链接。我在这儿等着你。
-=======
       email_settings_hint_html: 点击发送到 %{email} 的链接，即可开始使用 Mastodon。
->>>>>>> upstream/main
       link_not_received: 没有收到链接？
       new_confirmation_instructions_sent: 你将在几分钟内收到一封带有确认链接的新邮件！
       title: 请检查你的收件箱
@@ -1229,11 +1209,7 @@ zh-CN:
       title: 登录到 %{domain}
     sign_up:
       manual_review: 你在 %{domain} 上的注册需要经由管理人员手动审核。 为了帮助我们处理你的注册，请简要说明你为什么想在 %{domain} 上注册。
-<<<<<<< HEAD
-      preamble: 有了这个Mastodon服务器上的账号，你就可以关注Mastodon网络上的任何其他人，无论他们的账号在哪里。
-=======
       preamble: 在这个 Mastodon 站点上注册一个账号，你就可以关注联邦宇宙中的任何人，无论他们的账号在哪里。
->>>>>>> upstream/main
       title: 让我们在 %{domain} 上开始。
     status:
       account_status: 账号状态
@@ -1445,21 +1421,6 @@ zh-CN:
       overwrite: 覆盖
       overwrite_long: 将当前记录替换为新记录
     overwrite_preambles:
-<<<<<<< HEAD
-      blocking_html: 你即将使用来自<strong> %{filename} </strong>的最多<strong> %{total_items} 个账号</strong>替换你的屏蔽列表。
-      bookmarks_html: 你即将使用来自<strong> %{filename} </strong>的<strong> %{total_items} 篇嘟文</strong>替换你的收藏夹。
-      domain_blocking_html: 你即将使用来自<strong> %{filename} </strong>的最多<strong> %{total_items} 个站点域名</strong><strong>替换你的站点屏蔽列表</strong>。
-      following_html: 你即将从<strong> %{filename} </strong>关注<strong> %{total_items} 个账号</strong>，并停止关注其他任何人。
-      lists_html: 你即将用<strong> %{filename} </strong>的内容<strong>替换你的列表</strong>。新列表中将添加<strong> %{total_items} 个账号</strong>。
-      muting_html: 你即将使用来自<strong> %{filename} </strong>的最多<strong> %{total_items} 个账号</strong>替换你已隐藏的账号列表。
-    preambles:
-      blocking_html: 你即将从<strong> %{filename} </strong>中<strong>封锁</strong>多达<strong> %{total_items} </strong>个账号。
-      bookmarks_html: 你即将把来自<strong> %{filename} </strong>的<strong> %{total_items} 篇嘟文</strong>添加到你的<strong>书签</strong>中。
-      domain_blocking_html: 你即将屏蔽<strong> %{filename} </strong>中<strong>列出的</strong><strong> %{total_items} 个站点域名</strong>。
-      following_html: 你即将从<strong> %{filename} </strong><strong>关注</strong>最多<strong> %{total_items} 个账号</strong>。
-      lists_html: 你即将从<strong> %{filename} </strong>中添加最多<strong> %{total_items} 个账号</strong>到你的<strong>列表</strong>中。如果没有可用列表，将创建新的列表。
-      muting_html: 你即将从<strong> %{filename} </strong>中<strong>隐藏</strong><strong> %{total_items} 个账号</strong>。
-=======
       blocking_html:
         other: 你即将使用来自 <strong>%{filename}</strong> 的最多 <strong>%{count} 个</strong>账号<strong>替换你的屏蔽列表</strong>。
       bookmarks_html:
@@ -1485,7 +1446,6 @@ zh-CN:
         other: 你即将从<strong> %{filename} </strong>中添加最多<strong> %{count} 个账号</strong>到你的<strong>列表</strong>中。如果没有可用列表，将创建新的列表。
       muting_html:
         other: 你即将<strong>隐藏</strong>来自 <strong>%{filename}</strong> 的最多 <strong>%{count} 个账号</strong>。
->>>>>>> upstream/main
     preface: 你可以在此导入你在其他实例导出的数据，比如你所关注或屏蔽的用户列表。
     recent_imports: 最近导入
     states:
@@ -1966,8 +1926,6 @@ zh-CN:
       further_actions_html: 如果不是你本人操作，我们建议你立即 %{action} 并启用双因素认证，以确保账号安全。
       subject: 已有新 IP 地址访问了你的账号
       title: 一次新登录
-<<<<<<< HEAD
-=======
     terms_of_service_changed:
       agreement: 继续使用你在 %{domain} 的账号即表示您同意这些条款。如果你不同意更新后的条款，你可以随时删除账号以终止与 %{domain} 的协议。
       changelog: 本次更新的要点如下：
@@ -1976,7 +1934,6 @@ zh-CN:
       subject: 服务条款变更
       subtitle: "%{domain} 更新了服务条款"
       title: 重要变更
->>>>>>> upstream/main
     warning:
       appeal: 提交申诉
       appeal_description: 如果你认为此结果有误，可以向 %{instance} 的工作人员提交申诉。

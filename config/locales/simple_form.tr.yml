@@ -3,11 +3,7 @@ tr:
   simple_form:
     hints:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: Her satırda bir tanesi. Sahte atıflardan korur.
-=======
         attribution_domains: Her satırda bir tane. Sahte atıflardan korur.
->>>>>>> upstream/main
         discoverable: Herkese açık gönderileriniz ve profiliniz Mastodon'un çeşitli kısımlarında öne çıkarılabilir veya önerilebilir ve profiliniz başka kullanıcılara önerilebilir.
         display_name: Tam adınız veya kullanıcı adınız.
         fields: Ana sayfanız, zamirleriniz, yaşınız, istediğiniz herhangi bir şey.
@@ -166,11 +162,7 @@ tr:
         url: Olayların gönderileceği yer
     labels:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: Size atıf verebilecek websiteleri
-=======
         attribution_domains: Size atıf verebilecek websiteleri
->>>>>>> upstream/main
         discoverable: Profil ve gönderileri keşif algoritmalarında kullan
         fields:
           name: Etiket

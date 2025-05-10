@@ -28,8 +28,6 @@ module DomainHelpers
       .and_yield(resolver)
   end
 
-<<<<<<< HEAD
-=======
   def configure_dns(domain:, results:)
     resolver = instance_double(Resolv::DNS, :timeouts= => nil)
 
@@ -49,7 +47,6 @@ module DomainHelpers
       .and_yield(resolver)
   end
 
->>>>>>> upstream/main
   private
 
   def double_mx(exchange)

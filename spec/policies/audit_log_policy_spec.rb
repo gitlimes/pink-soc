@@ -5,11 +5,7 @@ require 'rails_helper'
 RSpec.describe AuditLogPolicy do
   subject { described_class }
 
-<<<<<<< HEAD
-  let(:admin) { Fabricate(:user, role: UserRole.find_by(name: 'Admin')).account }
-=======
   let(:admin) { Fabricate(:admin_user).account }
->>>>>>> upstream/main
   let(:account) { Fabricate(:account) }
 
   permissions :index? do

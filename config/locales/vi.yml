@@ -184,10 +184,7 @@ vi:
         create_domain_block: Chặn máy chủ
         create_email_domain_block: Chặn tên miền email
         create_ip_block: Chặn IP
-<<<<<<< HEAD
-=======
         create_relay: Tạo relay
->>>>>>> upstream/main
         create_unavailable_domain: Bỏ liên hợp
         create_user_role: Tạo vai trò
         demote_user: Hạ vai trò
@@ -209,18 +206,12 @@ vi:
         disable_sign_in_token_auth_user: Tắt xác minh bằng email cho người dùng
         disable_user: Vô hiệu hóa đăng nhập
         enable_custom_emoji: Cho phép emoji
-<<<<<<< HEAD
-=======
         enable_relay: Bật relay
->>>>>>> upstream/main
         enable_sign_in_token_auth_user: Bật xác minh bằng email cho người dùng
         enable_user: Cho phép đăng nhập
         memorialize_account: Gán tưởng niệm
         promote_user: Nâng vai trò
-<<<<<<< HEAD
-=======
         publish_terms_of_service: Đăng Điều khoản Dịch vụ
->>>>>>> upstream/main
         reject_appeal: Từ chối khiếu nại
         reject_user: Từ chối đăng ký
         remove_avatar_user: Xóa ảnh đại diện
@@ -258,10 +249,7 @@ vi:
         create_domain_block_html: "%{name} đã chặn máy chủ %{target}"
         create_email_domain_block_html: "%{name} đã chặn tên miền email %{target}"
         create_ip_block_html: "%{name} đã chặn IP %{target}"
-<<<<<<< HEAD
-=======
         create_relay_html: "%{name} đã tạo relay %{target}"
->>>>>>> upstream/main
         create_unavailable_domain_html: "%{name} đã bỏ liên hợp với máy chủ %{target}"
         create_user_role_html: "%{name} đã tạo vai trò %{target}"
         demote_user_html: "%{name} đã hạ vai trò của %{target}"
@@ -273,10 +261,7 @@ vi:
         destroy_email_domain_block_html: "%{name} đã bỏ chặn email %{target}"
         destroy_instance_html: "%{name} đã thanh trừng máy chủ %{target}"
         destroy_ip_block_html: "%{name} đã bỏ chặn IP %{target}"
-<<<<<<< HEAD
-=======
         destroy_relay_html: "%{name} đã xóa relay %{target}"
->>>>>>> upstream/main
         destroy_status_html: "%{name} đã xóa tút của %{target}"
         destroy_unavailable_domain_html: "%{name} tiếp tục liên hợp với máy chủ %{target}"
         destroy_user_role_html: "%{name} đã xóa vai trò %{target}"
@@ -286,18 +271,12 @@ vi:
         disable_sign_in_token_auth_user_html: "%{name} đã tắt xác minh email của %{target}"
         disable_user_html: "%{name} đã vô hiệu hóa đăng nhập %{target}"
         enable_custom_emoji_html: "%{name} đã cho phép emoji %{target}"
-<<<<<<< HEAD
-=======
         enable_relay_html: "%{name} đã bật relay %{target}"
->>>>>>> upstream/main
         enable_sign_in_token_auth_user_html: "%{name} đã bật xác minh email của %{target}"
         enable_user_html: "%{name} đã bỏ vô hiệu hóa đăng nhập %{target}"
         memorialize_account_html: "%{name} đã biến tài khoản %{target} thành một trang tưởng niệm"
         promote_user_html: "%{name} đã nâng vai trò của %{target}"
-<<<<<<< HEAD
-=======
         publish_terms_of_service_html: "%{name} đã cập nhật điều khoản dịch vụ"
->>>>>>> upstream/main
         reject_appeal_html: "%{name} đã từ chối khiếu nại từ %{target}"
         reject_user_html: "%{name} đã từ chối đăng ký từ %{target}"
         remove_avatar_user_html: "%{name} đã xóa ảnh đại diện của %{target}"
@@ -889,12 +868,8 @@ vi:
       reblogs: Lượt đăng lại
       replied_to_html: Trả lời đến %{acct_link}
       status_changed: Tút đã sửa
-<<<<<<< HEAD
-      title: Tất cả tút
-=======
       status_title: Đăng bởi @%{name}
       title: Tút từ tài khoản - @%{name}
->>>>>>> upstream/main
       trending: Xu hướng
       view_publicly: Xem công khai
       visibility: Hiển thị

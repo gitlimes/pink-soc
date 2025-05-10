@@ -1552,15 +1552,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@csstools/postcss-light-dark-function@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "@csstools/postcss-light-dark-function@npm:2.0.4"
-=======
 "@csstools/postcss-light-dark-function@npm:^2.0.8":
   version: 2.0.8
   resolution: "@csstools/postcss-light-dark-function@npm:2.0.8"
->>>>>>> upstream/main
   dependencies:
     "@csstools/css-parser-algorithms": "npm:^3.0.4"
     "@csstools/css-tokenizer": "npm:^3.0.3"
@@ -1568,11 +1562,7 @@ __metadata:
     "@csstools/utilities": "npm:^2.0.0"
   peerDependencies:
     postcss: ^8.4
-<<<<<<< HEAD
-  checksum: 10c0/0176422ad9747953964b1ceff002df1ecb1952ebc481db6192070d68777135b582ea6fd32ae819b9c64c96cb9170bd6907c647c85b48daa4984b7ed3d7f9bccb
-=======
   checksum: 10c0/5494516f52d467dcace80495a4fb0fbd24207ae13634bb82b5c24e5d52e84665aebc28cd31fed8d96a41e91bf822185aba5a3d01680a140278c484741516c383
->>>>>>> upstream/main
   languageName: node
   linkType: hard
 
@@ -2634,12 +2624,8 @@ __metadata:
     "@formatjs/intl-pluralrules": "npm:^5.4.4"
     "@gamestdio/websocket": "npm:^0.3.2"
     "@github/webauthn-json": "npm:^2.1.1"
-<<<<<<< HEAD
-    "@rails/ujs": "npm:7.1.401"
-=======
     "@rails/ujs": "npm:7.1.501"
     "@react-spring/web": "npm:^9.7.5"
->>>>>>> upstream/main
     "@reduxjs/toolkit": "npm:^2.0.1"
     "@svgr/webpack": "npm:^5.5.0"
     "@testing-library/dom": "npm:^10.2.0"
@@ -3088,12 +3074,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@rails/ujs@npm:7.1.401":
-  version: 7.1.401
-  resolution: "@rails/ujs@npm:7.1.401"
-  checksum: 10c0/08eae084c80e837e47cc01d0be25a431495f7dea381dcaaa4ce39a3217fac46bf87d169b3dfcf304ae16e0714de7435c2b8c5eb8d5052e3ba70ef3050a72fa3c
-=======
 "@rails/ujs@npm:7.1.501":
   version: 7.1.501
   resolution: "@rails/ujs@npm:7.1.501"
@@ -3164,7 +3144,6 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 10c0/bcd1e052e1b16341a12a19bf4515f153ca09d1fa86ff7752a5d02d7c4db58e8baf80e6283e64411f1e388c65340dce2254b013083426806b5dbae38bd151e53e
->>>>>>> upstream/main
   languageName: node
   linkType: hard
 
@@ -13376,13 +13355,8 @@ __metadata:
   linkType: hard
 
 "postcss-preset-env@npm:^10.0.0":
-<<<<<<< HEAD
-  version: 10.0.5
-  resolution: "postcss-preset-env@npm:10.0.5"
-=======
   version: 10.1.6
   resolution: "postcss-preset-env@npm:10.1.6"
->>>>>>> upstream/main
   dependencies:
     "@csstools/postcss-cascade-layers": "npm:^5.0.1"
     "@csstools/postcss-color-function": "npm:^4.0.9"
@@ -13390,15 +13364,6 @@ __metadata:
     "@csstools/postcss-content-alt-text": "npm:^2.0.5"
     "@csstools/postcss-exponential-functions": "npm:^2.0.8"
     "@csstools/postcss-font-format-keywords": "npm:^4.0.0"
-<<<<<<< HEAD
-    "@csstools/postcss-gamut-mapping": "npm:^2.0.2"
-    "@csstools/postcss-gradients-interpolation-method": "npm:^5.0.2"
-    "@csstools/postcss-hwb-function": "npm:^4.0.2"
-    "@csstools/postcss-ic-unit": "npm:^4.0.0"
-    "@csstools/postcss-initial": "npm:^2.0.0"
-    "@csstools/postcss-is-pseudo-class": "npm:^5.0.0"
-    "@csstools/postcss-light-dark-function": "npm:^2.0.4"
-=======
     "@csstools/postcss-gamut-mapping": "npm:^2.0.9"
     "@csstools/postcss-gradients-interpolation-method": "npm:^5.0.9"
     "@csstools/postcss-hwb-function": "npm:^4.0.9"
@@ -13406,7 +13371,6 @@ __metadata:
     "@csstools/postcss-initial": "npm:^2.0.1"
     "@csstools/postcss-is-pseudo-class": "npm:^5.0.1"
     "@csstools/postcss-light-dark-function": "npm:^2.0.8"
->>>>>>> upstream/main
     "@csstools/postcss-logical-float-and-clear": "npm:^3.0.0"
     "@csstools/postcss-logical-overflow": "npm:^2.0.0"
     "@csstools/postcss-logical-overscroll-behavior": "npm:^2.0.0"
@@ -13459,11 +13423,7 @@ __metadata:
     postcss-selector-not: "npm:^8.0.1"
   peerDependencies:
     postcss: ^8.4
-<<<<<<< HEAD
-  checksum: 10c0/db5eb1175cb26bed3f1a4c47acc67935ffc784520321470520e59de366ac6f91be1e609fe36056af707ed20f7910721287cff0fae416c437dd3e944de13ffd05
-=======
   checksum: 10c0/89af9060f3528e254005e6b81e88c57589e6e7f74125b10d50ca8a05f830c9ac206f8197af1b3c4b7ba82d97993118dd121f1a11cfc9fd026e18d01ca6f7ad2d
->>>>>>> upstream/main
   languageName: node
   linkType: hard
 

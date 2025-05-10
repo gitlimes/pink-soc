@@ -3,11 +3,7 @@ ja:
   simple_form:
     hints:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: 1行につき1つずつ入力してください。この設定は関わりのないwebサイトに対して虚偽の帰属表示が行われることを防止する役割があります。
-=======
         attribution_domains: 1行につき1つずつ入力してください。この設定は関わりのないwebサイトに対して虚偽の帰属表示が行われることを防止する役割があります。
->>>>>>> upstream/main
         discoverable: プロフィールと公開投稿をMastodonのおすすめやハイライトとしてほかのユーザーに表示することを許可します。
         display_name: フルネーム、ハンドルネームなど
         fields: ホームページ、代名詞、年齢など何でも構いません。
@@ -152,10 +148,7 @@ ja:
         min_age: お住まいの国や地域の法律によって定められている最低年齢を下回ってはなりません。
       user:
         chosen_languages: 選択すると、選択した言語の投稿のみが公開タイムラインに表示されるようになります
-<<<<<<< HEAD
-=======
         date_of_birth: Mastodonを利用するには少なくとも%{age}歳以上であることを確認する必要があります。これは保存されません。
->>>>>>> upstream/main
         role: そのロールは、ユーザーが持つ権限を制御します。
       user_role:
         color: UI 全体でロールの表示に使用される色（16進数RGB形式）
@@ -169,11 +162,7 @@ ja:
         url: イベントの送信先
     labels:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: あなたの著者表示を許可するwebサイト
-=======
         attribution_domains: あなたの著者表示を許可するwebサイト
->>>>>>> upstream/main
         discoverable: アカウントを見つけやすくする
         fields:
           name: ラベル

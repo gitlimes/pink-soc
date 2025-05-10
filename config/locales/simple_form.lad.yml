@@ -308,11 +308,8 @@ lad:
         name: Etiketa
         trendable: Permite ke esta etiketa apareska en trendes
         usable: Permite ke publikasyones uzen esta etiketa lokalmente
-<<<<<<< HEAD
-=======
       terms_of_service_generator:
         domain: Domeno
->>>>>>> upstream/main
       user:
         date_of_birth_1i: Diya
         date_of_birth_2i: Mez

@@ -3,11 +3,7 @@ sl:
   simple_form:
     hints:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: Ena na vrstico. Ščiti pred napačno navedbo avtorstva.
-=======
         attribution_domains: Ena na vrstico. Ščiti pred napačno navedbo avtorstva.
->>>>>>> upstream/main
         discoverable: Vaše javne objave in profil so lahko predstavljeni ali priporočeni v različnih delih Mastodona, vaš profil pa je lahko predlagan drugim uporabnikom.
         display_name: Vaše polno ime ali lažno ime.
         fields: Vaša domača stran, starost, kar koli.
@@ -150,10 +146,7 @@ sl:
         min_age: Ne smete biti mlajši od starostne omejitve, ki jo postavljajo zakoni vašega pravosodnega sistema.
       user:
         chosen_languages: Ko je označeno, bodo v javnih časovnicah prikazane samo objave v izbranih jezikih
-<<<<<<< HEAD
-=======
         date_of_birth: Prepričati se moramo, da so uporabniki Mastodona stari vsaj %{age} let. Tega podatka ne bomo shranili.
->>>>>>> upstream/main
         role: Vloga določa, katera dovoljenja ima uporabnik.
       user_role:
         color: Barva, uporabljena za vlogo po celem up. vmesniku, podana v šestnajstiškem zapisu RGB
@@ -167,11 +160,7 @@ sl:
         url: Kam bodo poslani dogodki
     labels:
       account:
-<<<<<<< HEAD
-        attribution_domains_as_text: Spletna mesta, ki vas smejo navajati kot avtorja/ico
-=======
         attribution_domains: Spletna mesta, ki vas smejo navajati kot avtorja/ico
->>>>>>> upstream/main
         discoverable: Izpostavljaj profile in objave v algoritmih odkrivanja
         fields:
           name: Oznaka
