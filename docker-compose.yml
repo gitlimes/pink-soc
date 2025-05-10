@@ -83,7 +83,7 @@ services:
     # build:
     #   dockerfile: ./streaming/Dockerfile
     #   context: .
-    image: ghcr.io/gitlimes/mastodon-streaming:lastest
+    image: ghcr.io/gitlimes/mastodon-streaming:latest
     restart: always
     env_file: .env.production
     command: node ./streaming/index.js
