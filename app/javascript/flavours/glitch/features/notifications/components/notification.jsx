@@ -13,14 +13,13 @@ import { HotKeys } from 'react-hotkeys';
 import FlagIcon from '@/material-icons/400-24px/flag-fill.svg?react';
 import PersonIcon from '@/material-icons/400-24px/person-fill.svg?react';
 import PersonAddIcon from '@/material-icons/400-24px/person_add-fill.svg?react';
+import { Account } from 'flavours/glitch/components/account';
 import { Icon }  from 'flavours/glitch/components/icon';
 import { Permalink } from 'flavours/glitch/components/permalink';
-import AccountContainer from 'flavours/glitch/containers/account_container';
-import StatusContainer from 'flavours/glitch/containers/status_container';
+import { StatusQuoteManager } from 'flavours/glitch/components/status_quoted';
 import { WithRouterPropTypes } from 'flavours/glitch/utils/react_router';
 
 import FollowRequestContainer from '../containers/follow_request_container';
-import NotificationOverlayContainer from '../containers/overlay_container';
 
 import { ModerationWarning } from './moderation_warning';
 import { RelationshipsSeveranceEvent } from './relationships_severance_event';
@@ -132,8 +131,7 @@ class Notification extends ImmutablePureComponent {
             </span>
           </div>
 
-          <AccountContainer id={account.get('id')} hidden={this.props.hidden} />
-          <NotificationOverlayContainer notification={notification} />
+          <Account id={account.get('id')} hidden={this.props.hidden} />
         </div>
       </HotKeys>
     );
@@ -154,7 +152,6 @@ class Notification extends ImmutablePureComponent {
           </div>
 
           <FollowRequestContainer id={account.get('id')} withNote={false} hidden={this.props.hidden} />
-          <NotificationOverlayContainer notification={notification} />
         </div>
       </HotKeys>
     );
@@ -162,7 +159,7 @@ class Notification extends ImmutablePureComponent {
 
   renderMention (notification) {
     return (
-      <StatusContainer
+      <StatusQuoteManager
         id={notification.get('status')}
         containerId={notification.get('id')}
         withDismiss
@@ -184,7 +181,7 @@ class Notification extends ImmutablePureComponent {
 
   renderFavourite (notification) {
     return (
-      <StatusContainer
+      <StatusQuoteManager
         containerId={notification.get('id')}
         hidden={!!this.props.hidden}
         id={notification.get('status')}
@@ -209,7 +206,7 @@ class Notification extends ImmutablePureComponent {
 
   renderReblog (notification) {
     return (
-      <StatusContainer
+      <StatusQuoteManager
         containerId={notification.get('id')}
         hidden={!!this.props.hidden}
         id={notification.get('status')}
@@ -234,7 +231,7 @@ class Notification extends ImmutablePureComponent {
 
   renderStatus (notification) {
     return (
-      <StatusContainer
+      <StatusQuoteManager
         containerId={notification.get('id')}
         hidden={!!this.props.hidden}
         id={notification.get('status')}
@@ -259,7 +256,7 @@ class Notification extends ImmutablePureComponent {
 
   renderUpdate (notification) {
     return (
-      <StatusContainer
+      <StatusQuoteManager
         containerId={notification.get('id')}
         hidden={!!this.props.hidden}
         id={notification.get('status')}
@@ -284,7 +281,7 @@ class Notification extends ImmutablePureComponent {
 
   renderPoll (notification) {
     return (
-      <StatusContainer
+      <StatusQuoteManager
         containerId={notification.get('id')}
         hidden={!!this.props.hidden}
         id={notification.get('status')}
@@ -365,8 +362,7 @@ class Notification extends ImmutablePureComponent {
             </span>
           </div>
 
-          <AccountContainer id={account.get('id')} hidden={this.props.hidden} />
-          <NotificationOverlayContainer notification={notification} />
+          <Account id={account.get('id')} hidden={this.props.hidden} />
         </div>
       </HotKeys>
     );
@@ -406,7 +402,6 @@ class Notification extends ImmutablePureComponent {
           </div>
 
           <Report account={account} report={notification.get('report')} hidden={this.props.hidden} />
-          <NotificationOverlayContainer notification={notification} />
         </div>
       </HotKeys>
     );

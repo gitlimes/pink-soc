@@ -1,14 +1,9 @@
 import { createRoot } from 'react-dom/client';
 
-import '@/entrypoints/public-path';
-
-import { start } from 'flavours/glitch/common';
 import { Status } from 'flavours/glitch/features/standalone/status';
 import { afterInitialRender } from 'flavours/glitch/hooks/useRenderSignal';
 import { loadPolyfills } from 'flavours/glitch/polyfills';
 import ready from 'flavours/glitch/ready';
-
-start();
 
 function loaded() {
   const mountNode = document.getElementById('mastodon-status');
@@ -59,6 +54,10 @@ window.addEventListener('message', (e) => {
   if (!e.data || !isSetHeightMessage(e.data) || !window.parent) return;
 
   const data = e.data;
+
+  // Only set overflow to `hidden` once we got the expected `message` so the post can still be scrolled if
+  // embedded without parent Javascript support
+  document.body.style.overflow = 'hidden';
 
   // We use a timeout to allow for the React page to render before calculating the height
   afterInitialRender(() => {

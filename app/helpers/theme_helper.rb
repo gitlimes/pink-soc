@@ -6,11 +6,13 @@ module ThemeHelper
 
     if theme == 'system'
       ''.html_safe.tap do |tags|
-        tags << stylesheet_pack_tag("skins/#{flavour}/mastodon-light", media: 'not all and (prefers-color-scheme: dark)', crossorigin: 'anonymous')
-        tags << stylesheet_pack_tag("skins/#{flavour}/default", media: '(prefers-color-scheme: dark)', crossorigin: 'anonymous')
+        tags << vite_stylesheet_tag("skins/#{flavour}/mastodon-light.scss", media: 'not all and (prefers-color-scheme: dark)', crossorigin: 'anonymous')
+        tags << vite_stylesheet_tag("skins/#{flavour}/application.scss", media: '(prefers-color-scheme: dark)', crossorigin: 'anonymous')
       end
+    elsif theme == 'default'
+      vite_stylesheet_tag "skins/#{flavour}/application.scss", media: 'all', crossorigin: 'anonymous'
     else
-      stylesheet_pack_tag "skins/#{flavour}/#{theme}", media: 'all', crossorigin: 'anonymous'
+      vite_stylesheet_tag "skins/#{flavour}/#{theme}.scss", media: 'all', crossorigin: 'anonymous'
     end
   end
 
@@ -27,7 +29,32 @@ module ThemeHelper
     end
   end
 
+  def custom_stylesheet
+    if active_custom_stylesheet.present?
+      stylesheet_link_tag(
+        custom_css_path(active_custom_stylesheet),
+        host: root_url,
+        media: :all,
+        skip_pipeline: true
+      )
+    end
+  end
+
   private
+
+  def active_custom_stylesheet
+    if cached_custom_css_digest.present?
+      [:custom, cached_custom_css_digest.to_s.first(8)]
+        .compact_blank
+        .join('-')
+    end
+  end
+
+  def cached_custom_css_digest
+    Rails.cache.fetch(:setting_digest_custom_css) do
+      Setting.custom_css&.then { |content| Digest::SHA256.hexdigest(content) }
+    end
+  end
 
   def theme_color_for(theme)
     theme == 'mastodon-light' ? Themes::THEME_COLORS[:light] : Themes::THEME_COLORS[:dark]

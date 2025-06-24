@@ -32,6 +32,15 @@ class FeedManager
     "feed:#{type}:#{id}:#{subtype}"
   end
 
+  # The number of items in the given timeline
+  # @param [Symbol] type
+  # @param [Integer] id
+  # @param [Symbol] subtype
+  # @return [Integer]
+  def timeline_size(type, id, subtype = nil)
+    redis.zcard(key(type, id, subtype))
+  end
+
   # The filter result of the status to a particular feed
   # @param [Symbol] timeline_type
   # @param [Status] status
@@ -201,7 +210,7 @@ class FeedManager
     timeline_key        = key(:home, into_account.id)
     timeline_status_ids = redis.zrange(timeline_key, 0, -1)
 
-    from_account.statuses.select('id, reblog_of_id').where(id: timeline_status_ids).reorder(nil).find_each do |status|
+    from_account.statuses.select(:id, :reblog_of_id).where(id: timeline_status_ids).reorder(nil).find_each do |status|
       remove_from_feed(:home, into_account.id, status, aggregate_reblogs: into_account.user&.aggregates_reblogs?)
     end
   end
@@ -214,7 +223,7 @@ class FeedManager
     timeline_key        = key(:list, list.id)
     timeline_status_ids = redis.zrange(timeline_key, 0, -1)
 
-    from_account.statuses.select('id, reblog_of_id').where(id: timeline_status_ids).reorder(nil).find_each do |status|
+    from_account.statuses.select(:id, :reblog_of_id).where(id: timeline_status_ids).reorder(nil).find_each do |status|
       remove_from_feed(:list, list.id, status, aggregate_reblogs: list.account.user&.aggregates_reblogs?)
     end
   end
@@ -235,7 +244,7 @@ class FeedManager
                     .where.not(account: into_account.following)
                     .tagged_with_none(TagFollow.where(account: into_account).pluck(:tag_id))
 
-    scope.select('id, reblog_of_id').reorder(nil).find_each do |status|
+    scope.select(:id, :reblog_of_id).reorder(nil).find_each do |status|
       remove_from_feed(:home, into_account.id, status, aggregate_reblogs: into_account.user&.aggregates_reblogs?)
     end
   end
